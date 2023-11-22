@@ -1,0 +1,11 @@
+#!/bin/sh
+mount -t proc none /proc
+echo "ff1"
+mount -t sys none /sys
+echo "ff2"
+/bin/mount -n -t sysfs none /sys
+echo "ff3"
+/bin/mount -t ramfs none /dev
+echo "mayanjie"
+/sbin/mdev -
+echo "ff4"

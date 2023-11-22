@@ -1,0 +1,46 @@
+
+1.SOCKET UNIX DOMAIN
+	UNIX domain 中 流socket 和 数据报socket 用法。
+  UNIX domain socket地址 ： struct sockaddr_un
+	struct sockaddr_un{
+		sa_family_t sun_family;
+		char sun_path[108];	
+	}
+	示例：
+		const char * SOCKNAME = "/tmp/mysock";
+		int sfd;
+		struct sockaddr_un addr;
+		sfd = socket(AF_UNIX, SOCKNAME, 0);
+		memset(&addr, 0, sizeof(struct sockaddr_un));
+		addr.sun_family = AF_UNIX;
+		strncpy(addr.sun_path, SOCKNAME, sizeof(addr.sun_path)-1);
+		bind(sfd, (struct sockaddr *)addr, sizeof(struct sockaddr_un));
+	注意：
+		无法将一个socket绑定到一个已经存在的路径名上，bind会失败，返回EADDRINUSE错误。
+		通常socket会绑定绝对路径，因为对端需要知道这个路径。
+		socket 和 路径一对一。
+		无法使用open打来一个socket文件
+		不需要使用socket时，使用unlink() 删除其路径名条目。
+  UNIX domain 中的流socket
+	 已有示例。
+	send(int sockfd, const void *buf, size_t len, int flags);
+	recv(int sockfd, void *buf, size_t len, int flags);
+  UNIX domain 中的数据报socket	
+	已有示例
+	sendto(int sockfd, const void * buf, size_t len, int flags, const struct sockaddr *dest_addr, socklen_t addrlen);
+	recvfrom(int sockfd, void *buf, size_t len, int flags, struct sockaddr *src_addr, socklen_t *addrlen);
+  UNIX domain socket 权限
+	要连接一个UNIX domain流socket需要在该socket文件上拥有写权限
+	要通过一个UNIX domain数据报socket发送一个数据报需要在该socket文件上拥有写权限。
+	此外需要在存放此socket的路径名的所有目录拥有执行（搜索）权限。
+	改变权限需要在bind前调用umask() .
+  创建socket对，socketpair()
+	进程间通信，不需要绑定地址。
+  Linux抽象socket名空间
+	将一个UNIX domain socket绑定到一个名字上但不会在文件系统创建该名字。
+	1.不会与文件系统既有的名字产生冲突
+	2.不必在使用完socket之后删除socket路径名。
+	3.不必为文件系统创建一个路径名。
+	第一个字节为null,剩下字节为定义的抽象名字。
+
+

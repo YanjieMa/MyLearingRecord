@@ -1,0 +1,55 @@
+1.makefile 编写规则
+目标：依赖
+（tab）命令
+例子：
+main:main.c fun1.c func2.c
+	gcc -o main main.c func1.c func2.c -I./
+
+2.工作原理
+若想生成目标, 检查规则中的所有的依赖文件是否都存在:
+如果有的依赖文件不存在, 则向下搜索规则, 看是否有生成该依赖文件的规则:
+如果有规则用来生成该依赖文件, 则执行规则中的命令生成依赖文件;
+如果没有规则用来生成该依赖文件, 则报错
+如果所有依赖都存在, 检查规则中的目标是否需要更新, 必须先检查它的所有依赖,
+依赖中有任何一个被更新, 则目标必须更新.(检查的规则是哪个时间大哪个最新)
+
+3.makefile的变量
+（1）普通变量
+	变量定义直接用 =
+	使用变量值用 $(变量名)
+	foo = abc			// 定义变量并赋值
+	bar = $(foo)		// 使用变量, $(变量名)
+ (2)自带变量
+	CC = gcc # arm-linux-gcc
+	CPPFLAGS
+	CFLAGS
+	LDFLAGS
+ (3)自动变量
+	$@ 表示规则中的目标
+	$^ 表示规则中的所有条件 一个列表, 以空格隔开, 如果有重复则消除重复项
+	$< 表示规则中的第一个条件
+		只能在规则的命令中使用
+4.规则模式
+	%表示一个或多个, 在依赖条件中同样可以使用 %, 依赖条件中的 %的取值取决于其目标
+5.makefile函数
+	wildcard 查找指定目录下指定类型的文件
+		src=$(wildcard *.c) //找到当前路径下所有后缀为.c的文件，赋值给src
+	patsubst 匹配替换
+		obj=$(patsubst %.c,%.o,$(src)) //把src变量里后缀为.c的文件替换为.o	
+	src=$(wildcard  ./*.c)
+	object=$(patsubst %.c,%.o,$(src))
+	target=main
+	CC=gcc
+	CPPFLAGS=-I./
+
+	$(target):$(object)
+		$(CC) -o $@ $^
+
+	%.o:%.c
+		$(CC) -o  $@ -c $< $(CPPFLAGS)
+6.清理操作（伪目标）
+伪目标声明：
+	.PHONY:clean
+	clean:
+		-rm -f $(target) $(object)
+

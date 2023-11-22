@@ -1,0 +1,3 @@
+CC := i686-redhat-linux-gcc-5.2.1
+AS := i686-redhat-linux-gcc-5.2.1 -c
+

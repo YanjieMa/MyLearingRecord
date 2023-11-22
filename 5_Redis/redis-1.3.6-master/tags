@@ -1,0 +1,1263 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+::redis::__dispatch__	./redis.tcl	/^proc ::redis::__dispatch__ {id method args} {$/;"	p
+::redis::__method__channel	./redis.tcl	/^proc ::redis::__method__channel {id fd} {$/;"	p
+::redis::__method__close	./redis.tcl	/^proc ::redis::__method__close {id fd} {$/;"	p
+::redis::redis_bulk_read	./redis.tcl	/^proc ::redis::redis_bulk_read {fd} {$/;"	p
+::redis::redis_multi_bulk_read	./redis.tcl	/^proc ::redis::redis_multi_bulk_read fd {$/;"	p
+::redis::redis_read_line	./redis.tcl	/^proc ::redis::redis_read_line fd {$/;"	p
+::redis::redis_read_reply	./redis.tcl	/^proc ::redis::redis_read_reply fd {$/;"	p
+::redis::redis_readnl	./redis.tcl	/^proc ::redis::redis_readnl {fd len} {$/;"	p
+::redis::redis_write	./redis.tcl	/^proc ::redis::redis_write {fd buf} {$/;"	p
+::redis::redis_writenl	./redis.tcl	/^proc ::redis::redis_writenl {fd buf} {$/;"	p
+AE_ALL_EVENTS	./ae.h	47;"	d
+AE_DONT_WAIT	./ae.h	48;"	d
+AE_ERR	./ae.h	39;"	d
+AE_FILE_EVENTS	./ae.h	45;"	d
+AE_NOMORE	./ae.h	50;"	d
+AE_NONE	./ae.h	41;"	d
+AE_NOTUSED	./ae.h	53;"	d
+AE_OK	./ae.h	38;"	d
+AE_READABLE	./ae.h	42;"	d
+AE_SETSIZE	./ae.h	36;"	d
+AE_TIME_EVENTS	./ae.h	46;"	d
+AE_WRITABLE	./ae.h	43;"	d
+AL_START_HEAD	./adlist.h	88;"	d
+AL_START_TAIL	./adlist.h	89;"	d
+ANET_CONNECT_NONBLOCK	./anet.c	127;"	d	file:
+ANET_CONNECT_NONE	./anet.c	126;"	d	file:
+ANET_ERR	./anet.h	35;"	d
+ANET_ERR_LEN	./anet.h	36;"	d
+ANET_H	./anet.h	32;"	d
+ANET_OK	./anet.h	34;"	d
+APPENDFSYNC_ALWAYS	./redis.c	230;"	d	file:
+APPENDFSYNC_EVERYSEC	./redis.c	231;"	d	file:
+APPENDFSYNC_NO	./redis.c	229;"	d	file:
+AVOID_ERRNO	./lzfP.h	100;"	d
+BENCHOBJ	./Makefile	/^BENCHOBJ = ae.o anet.o redis-benchmark.o sds.o adlist.o zmalloc.o$/;"	m
+BENCHPRGNAME	./Makefile	/^BENCHPRGNAME = redis-benchmark$/;"	m
+CCLINK	./Makefile	/^  CCLINK?= -ldl -lnsl -lsocket -lm -lpthread$/;"	m
+CCLINK	./Makefile	/^  CCLINK?= -lm -pthread$/;"	m
+CCOPT	./Makefile	/^CCOPT= $(CFLAGS) $(CCLINK) $(ARCH) $(PROF)$/;"	m
+CFLAGS	./Makefile	/^  CFLAGS?= -std=c99 -pedantic $(OPTIMIZATION) -Wall -W $(ARCH) $(PROF)$/;"	m
+CFLAGS	./Makefile	/^  CFLAGS?= -std=c99 -pedantic $(OPTIMIZATION) -Wall -W -D__EXTENSIONS__ -D_XPG6$/;"	m
+CHECKDUMPOBJ	./Makefile	/^CHECKDUMPOBJ = redis-check-dump.o lzf_c.o lzf_d.o$/;"	m
+CHECKDUMPPRGNAME	./Makefile	/^CHECKDUMPPRGNAME = redis-check-dump$/;"	m
+CHECK_INPUT	./lzfP.h	121;"	d
+CLIENT_CONNECTING	./redis-benchmark.c	53;"	d	file:
+CLIENT_READREPLY	./redis-benchmark.c	55;"	d	file:
+CLIENT_SENDQUERY	./redis-benchmark.c	54;"	d	file:
+CLIOBJ	./Makefile	/^CLIOBJ = anet.o sds.o adlist.o redis-cli.o zmalloc.o$/;"	m
+CLIPRGNAME	./Makefile	/^CLIPRGNAME = redis-cli$/;"	m
+CURR_OFFSET	./redis-check-dump.c	75;"	d	file:
+DEBUG	./Makefile	/^DEBUG?= -g -rdynamic -ggdb $/;"	m
+DICT_ERR	./dict.h	40;"	d
+DICT_HT_INITIAL_SIZE	./dict.h	76;"	d
+DICT_NOTUSED	./dict.h	43;"	d
+DICT_OK	./dict.h	39;"	d
+DICT_STATS_VECTLEN	./dict.c	465;"	d	file:
+ERROR	./redis-check-dump.c	60;"	d	file:
+FRST	./lzf_c.c	48;"	d	file:
+GLUEREPLY_UP_TO	./redis.c	1861;"	d	file:
+HAVE_BACKTRACE	./config.h	26;"	d
+HAVE_EPOLL	./config.h	31;"	d
+HAVE_KQUEUE	./config.h	35;"	d
+HAVE_MALLOC_SIZE	./config.h	11;"	d
+HLOG	./lzfP.h	55;"	d
+HSIZE	./lzf_c.c	39;"	d	file:
+IDX	./lzf_c.c	51;"	d	file:
+IDX	./lzf_c.c	53;"	d	file:
+IDX	./lzf_c.c	55;"	d	file:
+INIT_HTAB	./lzfP.h	91;"	d
+IOThreadEntryPoint	./redis.c	/^static void *IOThreadEntryPoint(void *arg) {$/;"	f	file:
+LZFP_h	./lzfP.h	38;"	d
+LZF_H	./lzf.h	38;"	d
+LZF_STATE	./lzfP.h	/^typedef const u8 *LZF_STATE[1 << (HLOG)];$/;"	t
+LZF_STATE_ARG	./lzfP.h	109;"	d
+LZF_VERSION	./lzf.h	49;"	d
+MAX_LATENCY	./redis-benchmark.c	57;"	d	file:
+MAX_LIT	./lzf_c.c	74;"	d	file:
+MAX_OFF	./lzf_c.c	75;"	d	file:
+MAX_REF	./lzf_c.c	76;"	d	file:
+NEXT	./lzf_c.c	49;"	d	file:
+OBJ	./Makefile	/^OBJ = adlist.o ae.o anet.o dict.o redis.o sds.o zmalloc.o lzf_c.o lzf_d.o pqsort.o zipmap.o$/;"	m
+OPTIMIZATION	./Makefile	/^OPTIMIZATION?=-O2$/;"	m
+PREFIX_SIZE	./zmalloc.c	38;"	d	file:
+PREFIX_SIZE	./zmalloc.c	40;"	d	file:
+PRGNAME	./Makefile	/^PRGNAME = redis-server$/;"	m
+RCH	./Makefile	/^	make ARCH="-m32"$/;"	m
+REDIS_AGGR_MAX	./redis.c	5403;"	d	file:
+REDIS_AGGR_MIN	./redis.c	5402;"	d	file:
+REDIS_AGGR_SUM	./redis.c	5401;"	d	file:
+REDIS_BLOCKED	./redis.c	189;"	d	file:
+REDIS_CMD_BULK	./redis-cli.c	44;"	d	file:
+REDIS_CMD_BULK	./redis.c	107;"	d	file:
+REDIS_CMD_DENYOOM	./redis.c	113;"	d	file:
+REDIS_CMD_INLINE	./redis-cli.c	43;"	d	file:
+REDIS_CMD_INLINE	./redis.c	108;"	d	file:
+REDIS_CMD_MULTIBULK	./redis-cli.c	45;"	d	file:
+REDIS_CONFIGLINE_MAX	./redis.c	91;"	d	file:
+REDIS_DEBUG	./redis.c	217;"	d	file:
+REDIS_DEFAULT_DBNUM	./redis.c	90;"	d	file:
+REDIS_ENCODING_HT	./redis-check-dump.c	26;"	d	file:
+REDIS_ENCODING_HT	./redis.c	128;"	d	file:
+REDIS_ENCODING_INT	./redis-check-dump.c	24;"	d	file:
+REDIS_ENCODING_INT	./redis.c	126;"	d	file:
+REDIS_ENCODING_RAW	./redis-check-dump.c	23;"	d	file:
+REDIS_ENCODING_RAW	./redis.c	125;"	d	file:
+REDIS_ENCODING_ZIPMAP	./redis-check-dump.c	25;"	d	file:
+REDIS_ENCODING_ZIPMAP	./redis.c	127;"	d	file:
+REDIS_EOF	./redis-check-dump.c	31;"	d	file:
+REDIS_EOF	./redis.c	137;"	d	file:
+REDIS_ERR	./redis.c	82;"	d	file:
+REDIS_EXPIRELOOKUPS_PER_CRON	./redis.c	94;"	d	file:
+REDIS_EXPIRETIME	./redis-check-dump.c	29;"	d	file:
+REDIS_EXPIRETIME	./redis.c	135;"	d	file:
+REDIS_GETALL_KEYS	./redis.c	5974;"	d	file:
+REDIS_GETALL_VALS	./redis.c	5975;"	d	file:
+REDIS_HASH	./redis-check-dump.c	18;"	d	file:
+REDIS_HASH	./redis.c	120;"	d	file:
+REDIS_HASH_MAX_ZIPMAP_ENTRIES	./redis.c	234;"	d	file:
+REDIS_HASH_MAX_ZIPMAP_VALUE	./redis.c	235;"	d	file:
+REDIS_HEAD	./redis.c	207;"	d	file:
+REDIS_HT_MINFILL	./redis.c	104;"	d	file:
+REDIS_IOBUF_LEN	./redis.c	87;"	d	file:
+REDIS_IOJOB_DO_SWAP	./redis.c	515;"	d	file:
+REDIS_IOJOB_LOAD	./redis.c	513;"	d	file:
+REDIS_IOJOB_PREPARE_SWAP	./redis.c	514;"	d	file:
+REDIS_IO_WAIT	./redis.c	190;"	d	file:
+REDIS_LIST	./redis-check-dump.c	15;"	d	file:
+REDIS_LIST	./redis.c	117;"	d	file:
+REDIS_LOADBUF_LEN	./redis.c	88;"	d	file:
+REDIS_MASTER	./redis.c	186;"	d	file:
+REDIS_MAXIDLETIME	./redis.c	86;"	d	file:
+REDIS_MAX_COMPLETED_JOBS_PROCESSED	./redis.c	182;"	d	file:
+REDIS_MAX_SYNC_TIME	./redis.c	93;"	d	file:
+REDIS_MAX_WRITE_PER_EVENT	./redis.c	95;"	d	file:
+REDIS_MONITOR	./redis.c	187;"	d	file:
+REDIS_MULTI	./redis.c	188;"	d	file:
+REDIS_NOTICE	./redis.c	219;"	d	file:
+REDIS_NOTUSED	./redis-benchmark.c	59;"	d	file:
+REDIS_NOTUSED	./redis-cli.c	47;"	d	file:
+REDIS_NOTUSED	./redis.c	223;"	d	file:
+REDIS_OBJFREELIST_MAX	./redis.c	92;"	d	file:
+REDIS_OK	./redis.c	81;"	d	file:
+REDIS_OP_DIFF	./redis.c	4795;"	d	file:
+REDIS_OP_INTER	./redis.c	4796;"	d	file:
+REDIS_OP_UNION	./redis.c	4794;"	d	file:
+REDIS_RDB_14BITLEN	./redis-check-dump.c	47;"	d	file:
+REDIS_RDB_14BITLEN	./redis.c	153;"	d	file:
+REDIS_RDB_32BITLEN	./redis-check-dump.c	48;"	d	file:
+REDIS_RDB_32BITLEN	./redis.c	154;"	d	file:
+REDIS_RDB_6BITLEN	./redis-check-dump.c	46;"	d	file:
+REDIS_RDB_6BITLEN	./redis.c	152;"	d	file:
+REDIS_RDB_ENCVAL	./redis-check-dump.c	49;"	d	file:
+REDIS_RDB_ENCVAL	./redis.c	155;"	d	file:
+REDIS_RDB_ENC_INT16	./redis-check-dump.c	56;"	d	file:
+REDIS_RDB_ENC_INT16	./redis.c	162;"	d	file:
+REDIS_RDB_ENC_INT32	./redis-check-dump.c	57;"	d	file:
+REDIS_RDB_ENC_INT32	./redis.c	163;"	d	file:
+REDIS_RDB_ENC_INT8	./redis-check-dump.c	55;"	d	file:
+REDIS_RDB_ENC_INT8	./redis.c	161;"	d	file:
+REDIS_RDB_ENC_LZF	./redis-check-dump.c	58;"	d	file:
+REDIS_RDB_ENC_LZF	./redis.c	164;"	d	file:
+REDIS_RDB_LENERR	./redis-check-dump.c	50;"	d	file:
+REDIS_RDB_LENERR	./redis.c	156;"	d	file:
+REDIS_REPL_CONNECT	./redis.c	194;"	d	file:
+REDIS_REPL_CONNECTED	./redis.c	195;"	d	file:
+REDIS_REPL_NONE	./redis.c	193;"	d	file:
+REDIS_REPL_ONLINE	./redis.c	204;"	d	file:
+REDIS_REPL_SEND_BULK	./redis.c	203;"	d	file:
+REDIS_REPL_WAIT_BGSAVE_END	./redis.c	202;"	d	file:
+REDIS_REPL_WAIT_BGSAVE_START	./redis.c	201;"	d	file:
+REDIS_REQUEST_MAX_SIZE	./redis.c	96;"	d	file:
+REDIS_SELECTDB	./redis-check-dump.c	30;"	d	file:
+REDIS_SELECTDB	./redis.c	136;"	d	file:
+REDIS_SERVERPORT	./redis.c	85;"	d	file:
+REDIS_SET	./redis-check-dump.c	16;"	d	file:
+REDIS_SET	./redis.c	118;"	d	file:
+REDIS_SLAVE	./redis.c	185;"	d	file:
+REDIS_SORTKEY_MAX	./redis.c	214;"	d	file:
+REDIS_SORT_ASC	./redis.c	212;"	d	file:
+REDIS_SORT_DESC	./redis.c	213;"	d	file:
+REDIS_SORT_GET	./redis.c	211;"	d	file:
+REDIS_STATIC_ARGS	./redis.c	89;"	d	file:
+REDIS_STRING	./redis-check-dump.c	14;"	d	file:
+REDIS_STRING	./redis.c	116;"	d	file:
+REDIS_TAIL	./redis.c	208;"	d	file:
+REDIS_THREAD_STACK_SIZE	./redis.c	177;"	d	file:
+REDIS_VERBOSE	./redis.c	218;"	d	file:
+REDIS_VERSION	./redis.c	30;"	d	file:
+REDIS_VM_LOADING	./redis.c	170;"	d	file:
+REDIS_VM_MAX_NEAR_PAGES	./redis.c	174;"	d	file:
+REDIS_VM_MAX_RANDOM_JUMP	./redis.c	175;"	d	file:
+REDIS_VM_MAX_THREADS	./redis.c	176;"	d	file:
+REDIS_VM_MEMORY	./redis.c	167;"	d	file:
+REDIS_VM_SWAPPED	./redis.c	168;"	d	file:
+REDIS_VM_SWAPPING	./redis.c	169;"	d	file:
+REDIS_WARNING	./redis.c	220;"	d	file:
+REDIS_WRITEV_IOVEC_COUNT	./redis.c	101;"	d	file:
+REDIS_WRITEV_THRESHOLD	./redis.c	99;"	d	file:
+REDIS_ZSET	./redis-check-dump.c	17;"	d	file:
+REDIS_ZSET	./redis.c	119;"	d	file:
+REG_CS	./redis.h	/^  REG_CS,$/;"	e	enum:__anon6
+REG_CS	./redis.h	66;"	d
+REG_DS	./redis.h	/^  REG_DS,$/;"	e	enum:__anon6
+REG_DS	./redis.h	42;"	d
+REG_EAX	./redis.h	/^  REG_EAX,$/;"	e	enum:__anon6
+REG_EAX	./redis.h	58;"	d
+REG_EBP	./redis.h	/^  REG_EBP,$/;"	e	enum:__anon6
+REG_EBP	./redis.h	48;"	d
+REG_EBX	./redis.h	/^  REG_EBX,$/;"	e	enum:__anon6
+REG_EBX	./redis.h	52;"	d
+REG_ECX	./redis.h	/^  REG_ECX,$/;"	e	enum:__anon6
+REG_ECX	./redis.h	56;"	d
+REG_EDI	./redis.h	/^  REG_EDI,$/;"	e	enum:__anon6
+REG_EDI	./redis.h	44;"	d
+REG_EDX	./redis.h	/^  REG_EDX,$/;"	e	enum:__anon6
+REG_EDX	./redis.h	54;"	d
+REG_EFL	./redis.h	/^  REG_EFL,$/;"	e	enum:__anon6
+REG_EFL	./redis.h	68;"	d
+REG_EIP	./redis.h	/^  REG_EIP,$/;"	e	enum:__anon6
+REG_EIP	./redis.h	64;"	d
+REG_ERR	./redis.h	/^  REG_ERR,$/;"	e	enum:__anon6
+REG_ERR	./redis.h	62;"	d
+REG_ES	./redis.h	/^  REG_ES,$/;"	e	enum:__anon6
+REG_ES	./redis.h	40;"	d
+REG_ESI	./redis.h	/^  REG_ESI,$/;"	e	enum:__anon6
+REG_ESI	./redis.h	46;"	d
+REG_ESP	./redis.h	/^  REG_ESP,$/;"	e	enum:__anon6
+REG_ESP	./redis.h	50;"	d
+REG_FS	./redis.h	/^  REG_FS,$/;"	e	enum:__anon6
+REG_FS	./redis.h	38;"	d
+REG_GS	./redis.h	/^  REG_GS = 0,$/;"	e	enum:__anon6
+REG_GS	./redis.h	36;"	d
+REG_SS	./redis.h	/^  REG_SS$/;"	e	enum:__anon6
+REG_SS	./redis.h	72;"	d
+REG_TRAPNO	./redis.h	/^  REG_TRAPNO,$/;"	e	enum:__anon6
+REG_TRAPNO	./redis.h	60;"	d
+REG_UESP	./redis.h	/^  REG_UESP,$/;"	e	enum:__anon6
+REG_UESP	./redis.h	70;"	d
+REPLY_BULK	./redis-benchmark.c	50;"	d	file:
+REPLY_INT	./redis-benchmark.c	48;"	d	file:
+REPLY_MBULK	./redis-benchmark.c	51;"	d	file:
+REPLY_RETCODE	./redis-benchmark.c	49;"	d	file:
+R_Nan	./redis-check-dump.c	/^static double R_Zero, R_PosInf, R_NegInf, R_Nan;$/;"	v	file:
+R_Nan	./redis.c	/^static double R_Zero, R_PosInf, R_NegInf, R_Nan;$/;"	v	file:
+R_NegInf	./redis-check-dump.c	/^static double R_Zero, R_PosInf, R_NegInf, R_Nan;$/;"	v	file:
+R_NegInf	./redis.c	/^static double R_Zero, R_PosInf, R_NegInf, R_Nan;$/;"	v	file:
+R_PosInf	./redis-check-dump.c	/^static double R_Zero, R_PosInf, R_NegInf, R_Nan;$/;"	v	file:
+R_PosInf	./redis.c	/^static double R_Zero, R_PosInf, R_NegInf, R_Nan;$/;"	v	file:
+R_Zero	./redis-check-dump.c	/^static double R_Zero, R_PosInf, R_NegInf, R_Nan;$/;"	v	file:
+R_Zero	./redis.c	/^static double R_Zero, R_PosInf, R_NegInf, R_Nan;$/;"	v	file:
+SDS_ABORT_ON_OOM	./sds.c	31;"	d	file:
+SET_ERRNO	./lzf_d.c	40;"	d	file:
+SET_ERRNO	./lzf_d.c	43;"	d	file:
+SHIFT_ERROR	./redis-check-dump.c	85;"	d	file:
+STANDALONE	./lzfP.h	40;"	d
+STRICT_ALIGN	./lzfP.h	139;"	d
+STRICT_ALIGN	./lzfP.h	140;"	d
+STRICT_ALIGN	./lzfP.h	82;"	d
+SWAPINIT	./pqsort.c	66;"	d	file:
+ULTRA_FAST	./lzfP.h	75;"	d
+VERY_FAST	./lzfP.h	146;"	d
+VERY_FAST	./lzfP.h	64;"	d
+ZIPMAP_BIGLEN	./zipmap.c	90;"	d	file:
+ZIPMAP_EMPTY	./zipmap.c	91;"	d	file:
+ZIPMAP_END	./zipmap.c	92;"	d	file:
+ZIPMAP_LEN_BYTES	./zipmap.c	103;"	d	file:
+ZIPMAP_STATUS_FRAGMENTED	./zipmap.c	94;"	d	file:
+ZIPMAP_VALUE_MAX_FREE	./zipmap.c	98;"	d	file:
+ZSKIPLIST_MAXLEVEL	./redis.c	225;"	d	file:
+ZSKIPLIST_P	./redis.c	226;"	d	file:
+_BSD_SOURCE	./fmacros.h	4;"	d
+_FILE_OFFSET_BITS	./fmacros.h	7;"	d
+_LARGEFILE_SOURCE	./fmacros.h	6;"	d
+_REDIS_FMACRO_H	./fmacros.h	2;"	d
+_XOPEN_SOURCE	./fmacros.h	5;"	d
+_ZIPMAP_H	./zipmap.h	36;"	d
+_ZMALLOC_H	./zmalloc.h	32;"	d
+__ADLIST_H__	./adlist.h	32;"	d
+__AE_H__	./ae.h	34;"	d
+__CONFIG_H	./config.h	2;"	d
+__DICT_H	./dict.h	37;"	d
+__PQSORT_H	./pqsort.h	9;"	d
+__REDIS_H__	./redis.h	31;"	d
+__SDS_H	./sds.h	32;"	d
+__USE_POSIX199309	./redis.c	40;"	d	file:
+__USE_UNIX98	./redis.c	41;"	d	file:
+_client	./redis-benchmark.c	/^typedef struct _client {$/;"	s	file:
+_dictAlloc	./dict.c	/^static void *_dictAlloc(size_t size)$/;"	f	file:
+_dictClear	./dict.c	/^int _dictClear(dict *ht)$/;"	f
+_dictExpandIfNeeded	./dict.c	/^static int _dictExpandIfNeeded(dict *ht)$/;"	f	file:
+_dictFree	./dict.c	/^static void _dictFree(void *ptr) {$/;"	f	file:
+_dictInit	./dict.c	/^int _dictInit(dict *ht, dictType *type,$/;"	f
+_dictKeyIndex	./dict.c	/^static int _dictKeyIndex(dict *ht, const void *key)$/;"	f	file:
+_dictNextPower	./dict.c	/^static unsigned long _dictNextPower(unsigned long size)$/;"	f	file:
+_dictPanic	./dict.c	/^static void _dictPanic(const char *fmt, ...)$/;"	f	file:
+_dictReset	./dict.c	/^static void _dictReset(dict *ht)$/;"	f	file:
+_dictStringCopyHTHashFunction	./dict.c	/^static unsigned int _dictStringCopyHTHashFunction(const void *key)$/;"	f	file:
+_dictStringCopyHTKeyCompare	./dict.c	/^static int _dictStringCopyHTKeyCompare(void *privdata, const void *key1,$/;"	f	file:
+_dictStringCopyHTKeyDestructor	./dict.c	/^static void _dictStringCopyHTKeyDestructor(void *privdata, void *key)$/;"	f	file:
+_dictStringCopyHTKeyDup	./dict.c	/^static void *_dictStringCopyHTKeyDup(void *privdata, const void *key)$/;"	f	file:
+_dictStringKeyValCopyHTValDestructor	./dict.c	/^static void _dictStringKeyValCopyHTValDestructor(void *privdata, void *val)$/;"	f	file:
+_dictStringKeyValCopyHTValDup	./dict.c	/^static void *_dictStringKeyValCopyHTValDup(void *privdata, const void *val)$/;"	f	file:
+_pqsort	./pqsort.c	/^_pqsort(void *a, size_t n, size_t es,$/;"	f	file:
+_redisAssert	./redis.c	/^static void _redisAssert(char *estr, char *file, int line) {$/;"	f	file:
+_redisSortObject	./redis.c	/^typedef struct _redisSortObject {$/;"	s	file:
+_redisSortOperation	./redis.c	/^typedef struct _redisSortOperation {$/;"	s	file:
+_rfds	./ae_select.c	/^    fd_set _rfds, _wfds;$/;"	m	struct:aeApiState	file:
+_wfds	./ae_select.c	/^    fd_set _rfds, _wfds;$/;"	m	struct:aeApiState	file:
+acceptHandler	./redis.c	/^static void acceptHandler(aeEventLoop *el, int fd, void *privdata, int mask) {$/;"	f	file:
+addReply	./redis.c	/^static void addReply(redisClient *c, robj *obj) {$/;"	f	file:
+addReplyBulk	./redis.c	/^static void addReplyBulk(redisClient *c, robj *obj) {$/;"	f	file:
+addReplyBulkLen	./redis.c	/^static void addReplyBulkLen(redisClient *c, robj *obj) {$/;"	f	file:
+addReplyDouble	./redis.c	/^static void addReplyDouble(redisClient *c, double d) {$/;"	f	file:
+addReplyLong	./redis.c	/^static void addReplyLong(redisClient *c, long l) {$/;"	f	file:
+addReplySds	./redis.c	/^static void addReplySds(redisClient *c, sds s) {$/;"	f	file:
+addReplyUlong	./redis.c	/^static void addReplyUlong(redisClient *c, unsigned long ul) {$/;"	f	file:
+aeAddMillisecondsToNow	./ae.c	/^static void aeAddMillisecondsToNow(long long milliseconds, long *sec, long *ms) {$/;"	f	file:
+aeApiAddEvent	./ae_epoll.c	/^static int aeApiAddEvent(aeEventLoop *eventLoop, int fd, int mask) {$/;"	f	file:
+aeApiAddEvent	./ae_kqueue.c	/^static int aeApiAddEvent(aeEventLoop *eventLoop, int fd, int mask) {$/;"	f	file:
+aeApiAddEvent	./ae_select.c	/^static int aeApiAddEvent(aeEventLoop *eventLoop, int fd, int mask) {$/;"	f	file:
+aeApiCreate	./ae_epoll.c	/^static int aeApiCreate(aeEventLoop *eventLoop) {$/;"	f	file:
+aeApiCreate	./ae_kqueue.c	/^static int aeApiCreate(aeEventLoop *eventLoop) {$/;"	f	file:
+aeApiCreate	./ae_select.c	/^static int aeApiCreate(aeEventLoop *eventLoop) {$/;"	f	file:
+aeApiDelEvent	./ae_epoll.c	/^static void aeApiDelEvent(aeEventLoop *eventLoop, int fd, int delmask) {$/;"	f	file:
+aeApiDelEvent	./ae_kqueue.c	/^static void aeApiDelEvent(aeEventLoop *eventLoop, int fd, int mask) {$/;"	f	file:
+aeApiDelEvent	./ae_select.c	/^static void aeApiDelEvent(aeEventLoop *eventLoop, int fd, int mask) {$/;"	f	file:
+aeApiFree	./ae_epoll.c	/^static void aeApiFree(aeEventLoop *eventLoop) {$/;"	f	file:
+aeApiFree	./ae_kqueue.c	/^static void aeApiFree(aeEventLoop *eventLoop) {$/;"	f	file:
+aeApiFree	./ae_select.c	/^static void aeApiFree(aeEventLoop *eventLoop) {$/;"	f	file:
+aeApiName	./ae_epoll.c	/^static char *aeApiName(void) {$/;"	f	file:
+aeApiName	./ae_kqueue.c	/^static char *aeApiName(void) {$/;"	f	file:
+aeApiName	./ae_select.c	/^static char *aeApiName(void) {$/;"	f	file:
+aeApiPoll	./ae_epoll.c	/^static int aeApiPoll(aeEventLoop *eventLoop, struct timeval *tvp) {$/;"	f	file:
+aeApiPoll	./ae_kqueue.c	/^static int aeApiPoll(aeEventLoop *eventLoop, struct timeval *tvp) {$/;"	f	file:
+aeApiPoll	./ae_select.c	/^static int aeApiPoll(aeEventLoop *eventLoop, struct timeval *tvp) {$/;"	f	file:
+aeApiState	./ae_epoll.c	/^typedef struct aeApiState {$/;"	s	file:
+aeApiState	./ae_epoll.c	/^} aeApiState;$/;"	t	typeref:struct:aeApiState	file:
+aeApiState	./ae_kqueue.c	/^typedef struct aeApiState {$/;"	s	file:
+aeApiState	./ae_kqueue.c	/^} aeApiState;$/;"	t	typeref:struct:aeApiState	file:
+aeApiState	./ae_select.c	/^typedef struct aeApiState {$/;"	s	file:
+aeApiState	./ae_select.c	/^} aeApiState;$/;"	t	typeref:struct:aeApiState	file:
+aeBeforeSleepProc	./ae.h	/^typedef void aeBeforeSleepProc(struct aeEventLoop *eventLoop);$/;"	t
+aeCreateEventLoop	./ae.c	/^aeEventLoop *aeCreateEventLoop(void) {$/;"	f
+aeCreateFileEvent	./ae.c	/^int aeCreateFileEvent(aeEventLoop *eventLoop, int fd, int mask,$/;"	f
+aeCreateTimeEvent	./ae.c	/^long long aeCreateTimeEvent(aeEventLoop *eventLoop, long long milliseconds,$/;"	f
+aeDeleteEventLoop	./ae.c	/^void aeDeleteEventLoop(aeEventLoop *eventLoop) {$/;"	f
+aeDeleteFileEvent	./ae.c	/^void aeDeleteFileEvent(aeEventLoop *eventLoop, int fd, int mask)$/;"	f
+aeDeleteTimeEvent	./ae.c	/^int aeDeleteTimeEvent(aeEventLoop *eventLoop, long long id)$/;"	f
+aeEventFinalizerProc	./ae.h	/^typedef void aeEventFinalizerProc(struct aeEventLoop *eventLoop, void *clientData);$/;"	t
+aeEventLoop	./ae.h	/^typedef struct aeEventLoop {$/;"	s
+aeEventLoop	./ae.h	/^} aeEventLoop;$/;"	t	typeref:struct:aeEventLoop
+aeFileEvent	./ae.h	/^typedef struct aeFileEvent {$/;"	s
+aeFileEvent	./ae.h	/^} aeFileEvent;$/;"	t	typeref:struct:aeFileEvent
+aeFileProc	./ae.h	/^typedef void aeFileProc(struct aeEventLoop *eventLoop, int fd, void *clientData, int mask);$/;"	t
+aeFiredEvent	./ae.h	/^typedef struct aeFiredEvent {$/;"	s
+aeFiredEvent	./ae.h	/^} aeFiredEvent;$/;"	t	typeref:struct:aeFiredEvent
+aeGetApiName	./ae.c	/^char *aeGetApiName(void) {$/;"	f
+aeGetTime	./ae.c	/^static void aeGetTime(long *seconds, long *milliseconds)$/;"	f	file:
+aeMain	./ae.c	/^void aeMain(aeEventLoop *eventLoop) {$/;"	f
+aeProcessEvents	./ae.c	/^int aeProcessEvents(aeEventLoop *eventLoop, int flags)$/;"	f
+aeSearchNearestTimer	./ae.c	/^static aeTimeEvent *aeSearchNearestTimer(aeEventLoop *eventLoop)$/;"	f	file:
+aeSetBeforeSleepProc	./ae.c	/^void aeSetBeforeSleepProc(aeEventLoop *eventLoop, aeBeforeSleepProc *beforesleep) {$/;"	f
+aeStop	./ae.c	/^void aeStop(aeEventLoop *eventLoop) {$/;"	f
+aeTimeEvent	./ae.h	/^typedef struct aeTimeEvent {$/;"	s
+aeTimeEvent	./ae.h	/^} aeTimeEvent;$/;"	t	typeref:struct:aeTimeEvent
+aeTimeProc	./ae.h	/^typedef int aeTimeProc(struct aeEventLoop *eventLoop, long long id, void *clientData);$/;"	t
+aeWait	./ae.c	/^int aeWait(int fd, int mask, long long milliseconds) {$/;"	f
+anetAccept	./anet.c	/^int anetAccept(char *err, int serversock, char *ip, int *port)$/;"	f
+anetNonBlock	./anet.c	/^int anetNonBlock(char *err, int fd)$/;"	f
+anetRead	./anet.c	/^int anetRead(int fd, char *buf, int count)$/;"	f
+anetResolve	./anet.c	/^int anetResolve(char *err, char *host, char *ipbuf)$/;"	f
+anetSetError	./anet.c	/^static void anetSetError(char *err, const char *fmt, ...)$/;"	f	file:
+anetSetSendBuffer	./anet.c	/^int anetSetSendBuffer(char *err, int fd, int buffsize)$/;"	f
+anetTcpConnect	./anet.c	/^int anetTcpConnect(char *err, char *addr, int port)$/;"	f
+anetTcpGenericConnect	./anet.c	/^static int anetTcpGenericConnect(char *err, char *addr, int port, int flags)$/;"	f	file:
+anetTcpKeepAlive	./anet.c	/^int anetTcpKeepAlive(char *err, int fd)$/;"	f
+anetTcpNoDelay	./anet.c	/^int anetTcpNoDelay(char *err, int fd)$/;"	f
+anetTcpNonBlockConnect	./anet.c	/^int anetTcpNonBlockConnect(char *err, char *addr, int port)$/;"	f
+anetTcpServer	./anet.c	/^int anetTcpServer(char *err, int port, char *bindaddr)$/;"	f
+anetWrite	./anet.c	/^int anetWrite(int fd, char *buf, int count)$/;"	f
+aofRemoveTempFile	./redis.c	/^static void aofRemoveTempFile(pid_t childpid) {$/;"	f	file:
+apidata	./ae.h	/^    void *apidata; \/* This is used for polling API specific data *\/$/;"	m	struct:aeEventLoop
+appendCommand	./redis.c	/^static void appendCommand(redisClient *c) {$/;"	f	file:
+appendServerSaveParams	./redis.c	/^static void appendServerSaveParams(time_t seconds, int changes) {$/;"	f	file:
+appendfd	./redis.c	/^    int appendfd;$/;"	m	struct:redisServer	file:
+appendfilename	./redis.c	/^    char *appendfilename;$/;"	m	struct:redisServer	file:
+appendfsync	./redis.c	/^    int appendfsync;$/;"	m	struct:redisServer	file:
+appendonly	./redis.c	/^    int appendonly;$/;"	m	struct:redisServer	file:
+appendseldb	./redis.c	/^    int appendseldb;$/;"	m	struct:redisServer	file:
+argc	./redis.c	/^    int argc, mbargc;$/;"	m	struct:redisClient	file:
+argc	./redis.c	/^    int argc;$/;"	m	struct:multiCmd	file:
+argv	./redis.c	/^    robj **argv, **mbargv;$/;"	m	struct:redisClient	file:
+argv	./redis.c	/^    robj **argv;$/;"	m	struct:multiCmd	file:
+arity	./redis-cli.c	/^    int arity;$/;"	m	struct:redisCommand	file:
+arity	./redis.c	/^    int arity;$/;"	m	struct:redisCommand	file:
+atime	./redis.c	/^    time_t atime;       \/* Last access time *\/$/;"	m	struct:redisObjectVM	file:
+auth	./redis-cli.c	/^    char *auth;$/;"	m	struct:config	file:
+authCommand	./redis.c	/^static void authCommand(redisClient *c) {$/;"	f	file:
+authenticated	./redis.c	/^    int authenticated;      \/* when requirepass is non-NULL *\/$/;"	m	struct:redisClient	file:
+backgroundRewriteDoneHandler	./redis.c	/^void backgroundRewriteDoneHandler(int statloc) {$/;"	f
+backgroundSaveDoneHandler	./redis.c	/^void backgroundSaveDoneHandler(int statloc) {$/;"	f
+backward	./redis.c	/^    struct zskiplistNode *backward;$/;"	m	struct:zskiplistNode	typeref:struct:zskiplistNode::zskiplistNode	file:
+beforeSleep	./redis.c	/^static void beforeSleep(struct aeEventLoop *eventLoop) {$/;"	f	file:
+beforesleep	./ae.h	/^    aeBeforeSleepProc *beforesleep;$/;"	m	struct:aeEventLoop
+bgrewriteaofCommand	./redis.c	/^static void bgrewriteaofCommand(redisClient *c) {$/;"	f	file:
+bgrewritebuf	./redis.c	/^    sds bgrewritebuf; \/* buffer taken by parent during oppend only rewrite *\/$/;"	m	struct:redisServer	file:
+bgrewritechildpid	./redis.c	/^    pid_t bgrewritechildpid;$/;"	m	struct:redisServer	file:
+bgsaveCommand	./redis.c	/^static void bgsaveCommand(redisClient *c) {$/;"	f	file:
+bgsavechildpid	./redis.c	/^    pid_t bgsavechildpid;$/;"	m	struct:redisServer	file:
+bindaddr	./redis.c	/^    char *bindaddr;$/;"	m	struct:redisServer	file:
+blockClientOnSwappedKeys	./redis.c	/^static int blockClientOnSwappedKeys(struct redisCommand *cmd, redisClient *c) {$/;"	f	file:
+blockForKeys	./redis.c	/^static void blockForKeys(redisClient *c, robj **keys, int numkeys, time_t timeout) {$/;"	f	file:
+blockingPopGenericCommand	./redis.c	/^static void blockingPopGenericCommand(redisClient *c, int where) {$/;"	f	file:
+blockingkeys	./redis.c	/^    dict *blockingkeys;         \/* Keys with clients waiting for data (BLPOP) *\/$/;"	m	struct:redisDb	file:
+blockingkeys	./redis.c	/^    robj **blockingkeys;    \/* The key we are waiting to terminate a blocking$/;"	m	struct:redisClient	file:
+blockingkeysnum	./redis.c	/^    int blockingkeysnum;    \/* Number of blocking keys *\/$/;"	m	struct:redisClient	file:
+blockingto	./redis.c	/^    time_t blockingto;      \/* Blocking operation timeout. If UNIX current time$/;"	m	struct:redisClient	file:
+blpopCommand	./redis.c	/^static void blpopCommand(redisClient *c) {$/;"	f	file:
+blpop_blocked_clients	./redis.c	/^    unsigned int blpop_blocked_clients;$/;"	m	struct:redisServer	file:
+brpopCommand	./redis.c	/^static void brpopCommand(redisClient *c) {$/;"	f	file:
+buf	./sds.h	/^    char buf[];$/;"	m	struct:sdshdr
+bulklen	./redis.c	/^    int bulklen;            \/* bulk read len. -1 if not in bulk read mode *\/$/;"	m	struct:redisClient	file:
+bytesToHuman	./redis.c	/^static void bytesToHuman(char *s, unsigned long long n) {$/;"	f	file:
+call	./redis.c	/^static void call(redisClient *c, struct redisCommand *cmd) {$/;"	f	file:
+canceled	./redis.c	/^    int canceled; \/* True if this command was canceled by blocking side of VM *\/$/;"	m	struct:iojob	file:
+changes	./redis.c	/^    int changes;$/;"	m	struct:saveparam	file:
+checkType	./redis.c	/^static int checkType(redisClient *c, robj *o, int type) {$/;"	f	file:
+cliConnect	./redis-cli.c	/^static int cliConnect(void) {$/;"	f	file:
+cliReadBulkReply	./redis-cli.c	/^static int cliReadBulkReply(int fd) {$/;"	f	file:
+cliReadLine	./redis-cli.c	/^static sds cliReadLine(int fd) {$/;"	f	file:
+cliReadMultiBulkReply	./redis-cli.c	/^static int cliReadMultiBulkReply(int fd) {$/;"	f	file:
+cliReadReply	./redis-cli.c	/^static int cliReadReply(int fd) {$/;"	f	file:
+cliReadSingleLineReply	./redis-cli.c	/^static int cliReadSingleLineReply(int fd, int quiet) {$/;"	f	file:
+cliSendCommand	./redis-cli.c	/^static int cliSendCommand(int argc, char **argv) {$/;"	f	file:
+client	./redis-benchmark.c	/^} *client;$/;"	t	typeref:struct:_client	file:
+clientData	./ae.h	/^    void *clientData;$/;"	m	struct:aeFileEvent
+clientData	./ae.h	/^    void *clientData;$/;"	m	struct:aeTimeEvent
+clientDone	./redis-benchmark.c	/^static void clientDone(client c) {$/;"	f	file:
+clients	./redis-benchmark.c	/^    list *clients;$/;"	m	struct:config	file:
+clients	./redis.c	/^    list *clients;$/;"	m	struct:redisServer	file:
+closeTimedoutClients	./redis.c	/^static void closeTimedoutClients(void) {$/;"	f	file:
+cmd	./redis.c	/^    struct redisCommand *cmd;$/;"	m	struct:multiCmd	typeref:struct:multiCmd::redisCommand	file:
+cmdTable	./redis-cli.c	/^static struct redisCommand cmdTable[] = {$/;"	v	typeref:struct:redisCommand	file:
+cmdTable	./redis.c	/^static struct redisCommand cmdTable[] = {$/;"	v	typeref:struct:redisCommand	file:
+cmpobj	./redis.c	/^        robj *cmpobj;$/;"	m	union:_redisSortObject::__anon1	file:
+colon	./redis.c	/^    *colon, *nullbulk, *nullmultibulk, *queued,$/;"	m	struct:sharedObjectsStruct	file:
+commands	./redis.c	/^    multiCmd *commands;     \/* Array of MULTI commands *\/$/;"	m	struct:multiState	file:
+compareStringObjects	./redis.c	/^static int compareStringObjects(robj *a, robj *b) {$/;"	f	file:
+computeObjectSwappability	./redis.c	/^static double computeObjectSwappability(robj *o) {$/;"	f	file:
+cone	./redis.c	/^    robj *crlf, *ok, *err, *emptybulk, *czero, *cone, *pong, *space,$/;"	m	struct:sharedObjectsStruct	file:
+config	./redis-benchmark.c	/^static struct config {$/;"	s	file:
+config	./redis-benchmark.c	/^} config;$/;"	v	typeref:struct:config	file:
+config	./redis-cli.c	/^static struct config {$/;"	s	file:
+config	./redis-cli.c	/^} config;$/;"	v	typeref:struct:config	file:
+convertToRealHash	./redis.c	/^static void convertToRealHash(robj *o) {$/;"	f	file:
+convertToSds	./redis-cli.c	/^static char **convertToSds(int count, char** args) {$/;"	f	file:
+count	./redis.c	/^    int count;              \/* Total number of MULTI commands *\/$/;"	m	struct:multiState	file:
+createClient	./redis-benchmark.c	/^static client createClient(void) {$/;"	f	file:
+createClient	./redis.c	/^static redisClient *createClient(int fd) {$/;"	f	file:
+createComplexDataset	./test-redis.tcl	/^proc createComplexDataset {r ops} {$/;"	p
+createFakeClient	./redis.c	/^static struct redisClient *createFakeClient(void) {$/;"	f	file:
+createHashObject	./redis.c	/^static robj *createHashObject(void) {$/;"	f	file:
+createListObject	./redis.c	/^static robj *createListObject(void) {$/;"	f	file:
+createMissingClients	./redis-benchmark.c	/^static void createMissingClients(client c) {$/;"	f	file:
+createObject	./redis.c	/^static robj *createObject(int type, void *ptr) {$/;"	f	file:
+createSetObject	./redis.c	/^static robj *createSetObject(void) {$/;"	f	file:
+createSharedObjects	./redis.c	/^static void createSharedObjects(void) {$/;"	f	file:
+createSortOperation	./redis.c	/^static redisSortOperation *createSortOperation(int type, robj *pattern) {$/;"	f	file:
+createStringObject	./redis.c	/^static robj *createStringObject(char *ptr, size_t len) {$/;"	f	file:
+createZsetObject	./redis.c	/^static robj *createZsetObject(void) {$/;"	f	file:
+crlf	./redis.c	/^    robj *crlf, *ok, *err, *emptybulk, *czero, *cone, *pong, *space,$/;"	m	struct:sharedObjectsStruct	file:
+cronloops	./redis.c	/^    int cronloops;              \/* number of times the cron function run *\/$/;"	m	struct:redisServer	file:
+czero	./redis.c	/^    robj *crlf, *ok, *err, *emptybulk, *czero, *cone, *pong, *space,$/;"	m	struct:sharedObjectsStruct	file:
+daemonize	./redis.c	/^    int daemonize;$/;"	m	struct:redisServer	file:
+daemonize	./redis.c	/^static void daemonize(void) {$/;"	f	file:
+data	./redis-check-dump.c	/^    void *data;$/;"	m	struct:__anon3	file:
+datasetDigest	./test-redis.tcl	/^proc datasetDigest r {$/;"	p
+datasize	./redis-benchmark.c	/^    int datasize;$/;"	m	struct:config	file:
+db	./redis.c	/^    redisDb *db;$/;"	m	struct:redisClient	file:
+db	./redis.c	/^    redisDb *db;$/;"	m	struct:redisServer	file:
+db	./redis.c	/^    redisDb *db;\/* Redis database *\/$/;"	m	struct:iojob	file:
+dbDictType	./redis.c	/^static dictType dbDictType = {$/;"	v	file:
+dbfilename	./redis.c	/^    char *dbfilename;$/;"	m	struct:redisServer	file:
+dbnum	./redis-cli.c	/^    int dbnum;$/;"	m	struct:config	file:
+dbnum	./redis.c	/^    int dbnum;$/;"	m	struct:redisServer	file:
+dbsizeCommand	./redis.c	/^static void dbsizeCommand(redisClient *c) {$/;"	f	file:
+debug	./redis-benchmark.c	/^    int debug;$/;"	m	struct:config	file:
+debugCommand	./redis.c	/^static void debugCommand(redisClient *c) {$/;"	f	file:
+decrCommand	./redis.c	/^static void decrCommand(redisClient *c) {$/;"	f	file:
+decrRefCount	./redis.c	/^static void decrRefCount(void *obj) {$/;"	f	file:
+decrbyCommand	./redis.c	/^static void decrbyCommand(redisClient *c) {$/;"	f	file:
+decrement_used_memory	./zmalloc.c	53;"	d	file:
+delCommand	./redis.c	/^static void delCommand(redisClient *c) {$/;"	f	file:
+deleteIfSwapped	./redis.c	/^static int deleteIfSwapped(redisDb *db, robj *key) {$/;"	f	file:
+deleteIfVolatile	./redis.c	/^static int deleteIfVolatile(redisDb *db, robj *key) {$/;"	f	file:
+deleteKey	./redis.c	/^static int deleteKey(redisDb *db, robj *key) {$/;"	f	file:
+devnull	./redis.c	/^    FILE *devnull;$/;"	m	struct:redisServer	file:
+dict	./dict.h	/^typedef struct dict {$/;"	s
+dict	./dict.h	/^} dict;$/;"	t	typeref:struct:dict
+dict	./redis.c	/^    dict *dict;                 \/* The keyspace for this DB *\/$/;"	m	struct:redisDb	file:
+dict	./redis.c	/^    dict *dict;$/;"	m	struct:__anon2	file:
+dict	./redis.c	/^    dict *dict;$/;"	m	struct:zset	file:
+dictAdd	./dict.c	/^int dictAdd(dict *ht, void *key, void *val)$/;"	f
+dictCompareHashKeys	./dict.h	101;"	d
+dictCreate	./dict.c	/^dict *dictCreate(dictType *type,$/;"	f
+dictDelete	./dict.c	/^int dictDelete(dict *ht, const void *key) {$/;"	f
+dictDeleteNoFree	./dict.c	/^int dictDeleteNoFree(dict *ht, const void *key) {$/;"	f
+dictEmpty	./dict.c	/^void dictEmpty(dict *ht) {$/;"	f
+dictEncObjHash	./redis.c	/^static unsigned int dictEncObjHash(const void *key) {$/;"	f	file:
+dictEncObjKeyCompare	./redis.c	/^static int dictEncObjKeyCompare(void *privdata, const void *key1,$/;"	f	file:
+dictEntry	./dict.h	/^typedef struct dictEntry {$/;"	s
+dictEntry	./dict.h	/^} dictEntry;$/;"	t	typeref:struct:dictEntry
+dictExpand	./dict.c	/^int dictExpand(dict *ht, unsigned long size)$/;"	f
+dictFind	./dict.c	/^dictEntry *dictFind(dict *ht, const void *key)$/;"	f
+dictFreeEntryKey	./dict.h	90;"	d
+dictFreeEntryVal	./dict.h	79;"	d
+dictGenHashFunction	./dict.c	/^unsigned int dictGenHashFunction(const unsigned char *buf, int len) {$/;"	f
+dictGenericDelete	./dict.c	/^static int dictGenericDelete(dict *ht, const void *key, int nofree)$/;"	f	file:
+dictGetEntryKey	./dict.h	108;"	d
+dictGetEntryVal	./dict.h	109;"	d
+dictGetIterator	./dict.c	/^dictIterator *dictGetIterator(dict *ht)$/;"	f
+dictGetRandomKey	./dict.c	/^dictEntry *dictGetRandomKey(dict *ht)$/;"	f
+dictHashKey	./dict.h	106;"	d
+dictIdentityHashFunction	./dict.c	/^unsigned int dictIdentityHashFunction(unsigned int key)$/;"	f
+dictIntHashFunction	./dict.c	/^unsigned int dictIntHashFunction(unsigned int key)$/;"	f
+dictIterator	./dict.h	/^typedef struct dictIterator {$/;"	s
+dictIterator	./dict.h	/^} dictIterator;$/;"	t	typeref:struct:dictIterator
+dictListDestructor	./redis.c	/^static void dictListDestructor(void *privdata, void *val)$/;"	f	file:
+dictNext	./dict.c	/^dictEntry *dictNext(dictIterator *iter)$/;"	f
+dictObjHash	./redis.c	/^static unsigned int dictObjHash(const void *key) {$/;"	f	file:
+dictObjKeyCompare	./redis.c	/^static int dictObjKeyCompare(void *privdata, const void *key1,$/;"	f	file:
+dictPrintStats	./dict.c	/^void dictPrintStats(dict *ht) {$/;"	f
+dictRedisObjectDestructor	./redis.c	/^static void dictRedisObjectDestructor(void *privdata, void *val)$/;"	f	file:
+dictRelease	./dict.c	/^void dictRelease(dict *ht)$/;"	f
+dictReleaseIterator	./dict.c	/^void dictReleaseIterator(dictIterator *iter)$/;"	f
+dictReplace	./dict.c	/^int dictReplace(dict *ht, void *key, void *val)$/;"	f
+dictResize	./dict.c	/^int dictResize(dict *ht)$/;"	f
+dictSetHashKey	./dict.h	94;"	d
+dictSetHashVal	./dict.h	83;"	d
+dictSize	./dict.h	111;"	d
+dictSlots	./dict.h	110;"	d
+dictType	./dict.h	/^typedef struct dictType {$/;"	s
+dictType	./dict.h	/^} dictType;$/;"	t	typeref:struct:dictType
+dictTypeHeapStringCopyKey	./dict.c	/^dictType dictTypeHeapStringCopyKey = {$/;"	v
+dictTypeHeapStringCopyKeyValue	./dict.c	/^dictType dictTypeHeapStringCopyKeyValue = {$/;"	v
+dictTypeHeapStrings	./dict.c	/^dictType dictTypeHeapStrings = {$/;"	v
+dictVanillaFree	./redis.c	/^static void dictVanillaFree(void *privdata, void *val)$/;"	f	file:
+dictid	./redis.c	/^    int dictid;$/;"	m	struct:redisClient	file:
+direction	./adlist.h	/^    int direction;$/;"	m	struct:listIter
+dirty	./redis.c	/^    long long dirty;            \/* changes to DB from the last save *\/$/;"	m	struct:redisServer	file:
+discardCommand	./redis.c	/^static void discardCommand(redisClient *c) {$/;"	f	file:
+donerequests	./redis-benchmark.c	/^    int donerequests;$/;"	m	struct:config	file:
+dontWaitForSwappedKey	./redis.c	/^static int dontWaitForSwappedKey(redisClient *c, robj *key) {$/;"	f	file:
+dup	./adlist.h	/^    void *(*dup)(void *ptr);$/;"	m	struct:list
+dupClientReplyValue	./redis.c	/^static void *dupClientReplyValue(void *o) {$/;"	f	file:
+dupStringObject	./redis.c	/^static robj *dupStringObject(robj *o) {$/;"	f	file:
+echoCommand	./redis.c	/^static void echoCommand(redisClient *c) {$/;"	f	file:
+el	./redis-benchmark.c	/^    aeEventLoop *el;$/;"	m	struct:config	file:
+el	./redis.c	/^    aeEventLoop *el;$/;"	m	struct:redisServer	file:
+emptyDb	./redis.c	/^static long long emptyDb() {$/;"	f	file:
+emptybulk	./redis.c	/^    robj *crlf, *ok, *err, *emptybulk, *czero, *cone, *pong, *space,$/;"	m	struct:sharedObjectsStruct	file:
+emptymultibulk	./redis.c	/^    *emptymultibulk, *wrongtypeerr, *nokeyerr, *syntaxerr, *sameobjecterr,$/;"	m	struct:sharedObjectsStruct	file:
+encoding	./redis.c	/^    unsigned char encoding;$/;"	m	struct:redisObject	file:
+endBenchmark	./redis-benchmark.c	/^static void endBenchmark(char *title) {$/;"	f	file:
+entry	./dict.h	/^    dictEntry *entry, *nextEntry;$/;"	m	struct:dictIterator
+entry	./redis-check-dump.c	/^} entry;$/;"	t	typeref:struct:__anon5	file:
+epfd	./ae_epoll.c	/^    int epfd;$/;"	m	struct:aeApiState	file:
+err	./redis.c	/^    robj *crlf, *ok, *err, *emptybulk, *czero, *cone, *pong, *space,$/;"	m	struct:sharedObjectsStruct	file:
+error	./redis-check-dump.c	/^    char error[16][1024];$/;"	m	struct:__anon4	file:
+errors	./redis-check-dump.c	/^static errors_t errors;$/;"	v	file:
+errors_t	./redis-check-dump.c	/^} errors_t;$/;"	t	typeref:struct:__anon4	file:
+events	./ae.h	/^    aeFileEvent events[AE_SETSIZE]; \/* Registered events *\/$/;"	m	struct:aeEventLoop
+events	./ae_epoll.c	/^    struct epoll_event events[AE_SETSIZE];$/;"	m	struct:aeApiState	typeref:struct:aeApiState::epoll_event	file:
+events	./ae_kqueue.c	/^    struct kevent events[AE_SETSIZE];$/;"	m	struct:aeApiState	typeref:struct:aeApiState::kevent	file:
+execCommand	./redis.c	/^static void execCommand(redisClient *c) {$/;"	f	file:
+existsCommand	./redis.c	/^static void existsCommand(redisClient *c) {$/;"	f	file:
+expandVmSwapFilename	./redis.c	/^static void expandVmSwapFilename(void) {$/;"	f	file:
+expect	./lzf_c.c	79;"	d	file:
+expect	./lzf_c.c	82;"	d	file:
+expect_false	./lzf_c.c	86;"	d	file:
+expect_true	./lzf_c.c	87;"	d	file:
+expireCommand	./redis.c	/^static void expireCommand(redisClient *c) {$/;"	f	file:
+expireGenericCommand	./redis.c	/^static void expireGenericCommand(redisClient *c, robj *key, time_t seconds) {$/;"	f	file:
+expireIfNeeded	./redis.c	/^static int expireIfNeeded(redisDb *db, robj *key) {$/;"	f	file:
+expireatCommand	./redis.c	/^static void expireatCommand(redisClient *c) {$/;"	f	file:
+expires	./redis.c	/^    dict *expires;              \/* Timeout of keys with a timeout set *\/$/;"	m	struct:redisDb	file:
+fd	./ae.h	/^    int fd;$/;"	m	struct:aeFiredEvent
+fd	./redis-benchmark.c	/^    int fd;$/;"	m	struct:_client	file:
+fd	./redis.c	/^    int fd;$/;"	m	struct:redisClient	file:
+fd	./redis.c	/^    int fd;$/;"	m	struct:redisServer	file:
+feedAppendOnlyFile	./redis.c	/^static void feedAppendOnlyFile(struct redisCommand *cmd, int dictid, robj **argv, int argc) {$/;"	f	file:
+finalizerProc	./ae.h	/^    aeEventFinalizerProc *finalizerProc;$/;"	m	struct:aeTimeEvent
+findFuncName	./redis.c	/^static char *findFuncName(void *pointer, unsigned long *offset){$/;"	f	file:
+fired	./ae.h	/^    aeFiredEvent fired[AE_SETSIZE]; \/* Fired events *\/$/;"	m	struct:aeEventLoop
+flags	./redis-cli.c	/^    int flags;$/;"	m	struct:redisCommand	file:
+flags	./redis.c	/^    int flags;              \/* REDIS_SLAVE | REDIS_MONITOR | REDIS_MULTI ... *\/$/;"	m	struct:redisClient	file:
+flags	./redis.c	/^    int flags;$/;"	m	struct:redisCommand	file:
+flushallCommand	./redis.c	/^static void flushallCommand(redisClient *c) {$/;"	f	file:
+flushdbCommand	./redis.c	/^static void flushdbCommand(redisClient *c) {$/;"	f	file:
+forward	./redis.c	/^    struct zskiplistNode **forward;$/;"	m	struct:zskiplistNode	typeref:struct:zskiplistNode::zskiplistNode	file:
+free	./adlist.h	/^    void (*free)(void *ptr);$/;"	m	struct:list
+free	./sds.h	/^    long free;$/;"	m	struct:sdshdr
+freeAllClients	./redis-benchmark.c	/^static void freeAllClients(void) {$/;"	f	file:
+freeClient	./redis-benchmark.c	/^static void freeClient(client c) {$/;"	f	file:
+freeClient	./redis.c	/^static void freeClient(redisClient *c) {$/;"	f	file:
+freeClientArgv	./redis.c	/^static void freeClientArgv(redisClient *c) {$/;"	f	file:
+freeClientMultiState	./redis.c	/^static void freeClientMultiState(redisClient *c) {$/;"	f	file:
+freeFakeClient	./redis.c	/^static void freeFakeClient(struct redisClient *c) {$/;"	f	file:
+freeHashObject	./redis.c	/^static void freeHashObject(robj *o) {$/;"	f	file:
+freeIOJob	./redis.c	/^static void freeIOJob(iojob *j) {$/;"	f	file:
+freeListObject	./redis.c	/^static void freeListObject(robj *o) {$/;"	f	file:
+freeMemoryIfNeeded	./redis.c	/^static void freeMemoryIfNeeded(void) {$/;"	f	file:
+freeSetObject	./redis.c	/^static void freeSetObject(robj *o) {$/;"	f	file:
+freeStringObject	./redis.c	/^static void freeStringObject(robj *o) {$/;"	f	file:
+freeZsetObject	./redis.c	/^static void freeZsetObject(robj *o) {$/;"	f	file:
+fwriteBulkDouble	./redis.c	/^static int fwriteBulkDouble(FILE *fp, double d) {$/;"	f	file:
+fwriteBulkLong	./redis.c	/^static int fwriteBulkLong(FILE *fp, long l) {$/;"	f	file:
+fwriteBulkObject	./redis.c	/^static int fwriteBulkObject(FILE *fp, robj *obj) {$/;"	f	file:
+fwriteBulkString	./redis.c	/^static int fwriteBulkString(FILE *fp, char *s, unsigned long len) {$/;"	f	file:
+genRedisInfoString	./redis.c	/^static sds genRedisInfoString(void) {$/;"	f	file:
+genericHgetallCommand	./redis.c	/^static void genericHgetallCommand(redisClient *c, int flags) {$/;"	f	file:
+genericZrangebyscoreCommand	./redis.c	/^static void genericZrangebyscoreCommand(redisClient *c, int justcount) {$/;"	f	file:
+getCommand	./redis.c	/^static void getCommand(redisClient *c) {$/;"	f	file:
+getDecodedObject	./redis.c	/^static robj *getDecodedObject(robj *o) {$/;"	f	file:
+getExpire	./redis.c	/^static time_t getExpire(redisDb *db, robj *key) {$/;"	f	file:
+getGenericCommand	./redis.c	/^static int getGenericCommand(redisClient *c) {$/;"	f	file:
+getMcontextEip	./redis.c	/^static void *getMcontextEip(ucontext_t *uc) {$/;"	f	file:
+getsetCommand	./redis.c	/^static void getsetCommand(redisClient *c) {$/;"	f	file:
+glueReplyBuffersIfNeeded	./redis.c	/^static void glueReplyBuffersIfNeeded(redisClient *c) {$/;"	f	file:
+glueoutputbuf	./redis.c	/^    int glueoutputbuf;$/;"	m	struct:redisServer	file:
+handleClientsBlockedOnSwappedKey	./redis.c	/^static void handleClientsBlockedOnSwappedKey(redisDb *db, robj *key) {$/;"	f	file:
+handleClientsWaitingListPush	./redis.c	/^static int handleClientsWaitingListPush(redisClient *c, robj *key, robj *ele) {$/;"	f	file:
+hashDictType	./redis.c	/^static dictType hashDictType = {$/;"	v	file:
+hashFunction	./dict.h	/^    unsigned int (*hashFunction)(const void *key);$/;"	m	struct:dictType
+hash_max_zipmap_entries	./redis.c	/^    size_t hash_max_zipmap_entries;$/;"	m	struct:redisServer	file:
+hash_max_zipmap_value	./redis.c	/^    size_t hash_max_zipmap_value;$/;"	m	struct:redisServer	file:
+hdelCommand	./redis.c	/^static void hdelCommand(redisClient *c) {$/;"	f	file:
+head	./adlist.h	/^    listNode *head;$/;"	m	struct:list
+header	./redis.c	/^    struct zskiplistNode *header, *tail;$/;"	m	struct:zskiplist	typeref:struct:zskiplist::zskiplistNode	file:
+hexistsCommand	./redis.c	/^static void hexistsCommand(redisClient *c) {$/;"	f	file:
+hgetCommand	./redis.c	/^static void hgetCommand(redisClient *c) {$/;"	f	file:
+hgetallCommand	./redis.c	/^static void hgetallCommand(redisClient *c) {$/;"	f	file:
+hkeysCommand	./redis.c	/^static void hkeysCommand(redisClient *c) {$/;"	f	file:
+hlenCommand	./redis.c	/^static void hlenCommand(redisClient *c) {$/;"	f	file:
+hostip	./redis-benchmark.c	/^    char *hostip;$/;"	m	struct:config	file:
+hostip	./redis-cli.c	/^    char *hostip;$/;"	m	struct:config	file:
+hostport	./redis-benchmark.c	/^    int hostport;$/;"	m	struct:config	file:
+hostport	./redis-cli.c	/^    int hostport;$/;"	m	struct:config	file:
+hsetCommand	./redis.c	/^static void hsetCommand(redisClient *c) {$/;"	f	file:
+ht	./dict.h	/^    dict *ht;$/;"	m	struct:dictIterator
+htNeedsResize	./redis.c	/^static int htNeedsResize(dict *dict) {$/;"	f	file:
+hvalsCommand	./redis.c	/^static void hvalsCommand(redisClient *c) {$/;"	f	file:
+ibuf	./redis-benchmark.c	/^    sds ibuf;$/;"	m	struct:_client	file:
+id	./ae.h	/^    long long id; \/* time event identifier. *\/$/;"	m	struct:aeTimeEvent
+id	./redis.c	/^    int id;$/;"	m	struct:redisDb	file:
+idlemode	./redis-benchmark.c	/^    int idlemode;$/;"	m	struct:config	file:
+incrCommand	./redis.c	/^static void incrCommand(redisClient *c) {$/;"	f	file:
+incrDecrCommand	./redis.c	/^static void incrDecrCommand(redisClient *c, long long incr) {$/;"	f	file:
+incrRefCount	./redis.c	/^static void incrRefCount(robj *o) {$/;"	f	file:
+incrbyCommand	./redis.c	/^static void incrbyCommand(redisClient *c) {$/;"	f	file:
+increment_used_memory	./zmalloc.c	43;"	d	file:
+index	./dict.h	/^    int index;$/;"	m	struct:dictIterator
+infoCommand	./redis.c	/^static void infoCommand(redisClient *c) {$/;"	f	file:
+initClientMultiState	./redis.c	/^static void initClientMultiState(redisClient *c) {$/;"	f	file:
+initServer	./redis.c	/^static void initServer() {$/;"	f	file:
+initServerConfig	./redis.c	/^static void initServerConfig() {$/;"	f	file:
+initStaticStringObject	./redis.c	273;"	d	file:
+inline	./lzf_c.c	80;"	d	file:
+inline	./lzf_c.c	83;"	d	file:
+interactive	./redis-cli.c	/^    int interactive;$/;"	m	struct:config	file:
+io_active_threads	./redis.c	/^    int io_active_threads; \/* Number of running I\/O threads *\/$/;"	m	struct:redisServer	file:
+io_keys	./redis.c	/^    dict *io_keys;              \/* Keys with clients waiting for VM I\/O *\/$/;"	m	struct:redisDb	file:
+io_keys	./redis.c	/^    list *io_keys;          \/* Keys this client is waiting to be loaded from the$/;"	m	struct:redisClient	file:
+io_mutex	./redis.c	/^    pthread_mutex_t io_mutex; \/* lock to access io_jobs\/io_done\/io_thread_job *\/$/;"	m	struct:redisServer	file:
+io_newjobs	./redis.c	/^    list *io_newjobs; \/* List of VM I\/O jobs yet to be processed *\/$/;"	m	struct:redisServer	file:
+io_processed	./redis.c	/^    list *io_processed; \/* List of VM I\/O jobs already processed *\/$/;"	m	struct:redisServer	file:
+io_processing	./redis.c	/^    list *io_processing; \/* List of VM I\/O jobs being processed *\/$/;"	m	struct:redisServer	file:
+io_ready_clients	./redis.c	/^    list *io_ready_clients; \/* Clients ready to be unblocked. All keys loaded *\/$/;"	m	struct:redisServer	file:
+io_ready_pipe_read	./redis.c	/^    int io_ready_pipe_read;$/;"	m	struct:redisServer	file:
+io_ready_pipe_write	./redis.c	/^    int io_ready_pipe_write;$/;"	m	struct:redisServer	file:
+io_swapfile_mutex	./redis.c	/^    pthread_mutex_t io_swapfile_mutex; \/* So we can lseek + write *\/$/;"	m	struct:redisServer	file:
+io_threads_attr	./redis.c	/^    pthread_attr_t io_threads_attr; \/* attributes for threads creation *\/$/;"	m	struct:redisServer	file:
+iojob	./redis.c	/^typedef struct iojob {$/;"	s	file:
+iojob	./redis.c	/^} iojob;$/;"	t	typeref:struct:iojob	file:
+isStringRepresentableAsLong	./redis.c	/^static int isStringRepresentableAsLong(sds s, long *longval) {$/;"	f	file:
+isfinite	./solarisfixes.h	10;"	d
+isfinite	./solarisfixes.h	9;"	d
+isinf	./solarisfixes.h	14;"	d
+isinf	./solarisfixes.h	15;"	d
+isnan	./solarisfixes.h	4;"	d
+isnan	./solarisfixes.h	5;"	d
+isslave	./redis.c	/^    int isslave;$/;"	m	struct:redisServer	file:
+keepalive	./redis-benchmark.c	/^    int keepalive;$/;"	m	struct:config	file:
+key	./dict.h	/^    void *key;$/;"	m	struct:dictEntry
+key	./redis-check-dump.c	/^    char* key;$/;"	m	struct:__anon5	file:
+key	./redis.c	/^    robj *key;  \/* This I\/O request is about swapping this key *\/$/;"	m	struct:iojob	file:
+keyCompare	./dict.h	/^    int (*keyCompare)(void *privdata, const void *key1, const void *key2);$/;"	m	struct:dictType
+keyDestructor	./dict.h	/^    void (*keyDestructor)(void *privdata, void *key);$/;"	m	struct:dictType
+keyDup	./dict.h	/^    void *(*keyDup)(void *privdata, const void *key);$/;"	m	struct:dictType
+keylistDictType	./redis.c	/^static dictType keylistDictType = {$/;"	v	file:
+keyptrDictType	./redis.c	/^static dictType keyptrDictType = {$/;"	v	file:
+keysCommand	./redis.c	/^static void keysCommand(redisClient *c) {$/;"	f	file:
+keysize	./redis-benchmark.c	/^    int keysize;$/;"	m	struct:config	file:
+kqfd	./ae_kqueue.c	/^    int kqfd;$/;"	m	struct:aeApiState	file:
+lastfsync	./redis.c	/^    time_t lastfsync;$/;"	m	struct:redisServer	file:
+lastinteraction	./redis.c	/^    time_t lastinteraction; \/* time of the last interaction, used for timeout *\/$/;"	m	struct:redisClient	file:
+lastsave	./redis.c	/^    time_t lastsave;            \/* Unix time of last save succeeede *\/$/;"	m	struct:redisServer	file:
+lastsaveCommand	./redis.c	/^static void lastsaveCommand(redisClient *c) {$/;"	f	file:
+latency	./redis-benchmark.c	/^    int *latency;$/;"	m	struct:config	file:
+len	./adlist.h	/^    unsigned int len;$/;"	m	struct:list
+len	./sds.h	/^    long len;$/;"	m	struct:sdshdr
+length	./redis.c	/^    unsigned long length;$/;"	m	struct:zskiplist	file:
+level	./redis-check-dump.c	/^    unsigned int level;$/;"	m	struct:__anon4	file:
+level	./redis-check-dump.c	/^static unsigned char level = 0;$/;"	v	file:
+level	./redis.c	/^    int level;$/;"	m	struct:zskiplist	file:
+lindexCommand	./redis.c	/^static void lindexCommand(redisClient *c) {$/;"	f	file:
+linuxOvercommitMemoryValue	./redis.c	/^int linuxOvercommitMemoryValue(void) {$/;"	f
+linuxOvercommitMemoryWarning	./redis.c	/^void linuxOvercommitMemoryWarning(void) {$/;"	f
+list	./adlist.h	/^typedef struct list {$/;"	s
+list	./adlist.h	/^} list;$/;"	t	typeref:struct:list
+listAddNodeHead	./adlist.c	/^list *listAddNodeHead(list *list, void *value)$/;"	f
+listAddNodeTail	./adlist.c	/^list *listAddNodeTail(list *list, void *value)$/;"	f
+listCreate	./adlist.c	/^list *listCreate(void)$/;"	f
+listDelNode	./adlist.c	/^void listDelNode(list *list, listNode *node)$/;"	f
+listDup	./adlist.c	/^list *listDup(list *orig)$/;"	f
+listFirst	./adlist.h	58;"	d
+listGetDupMethod	./adlist.h	68;"	d
+listGetFree	./adlist.h	69;"	d
+listGetIterator	./adlist.c	/^listIter *listGetIterator(list *list, int direction)$/;"	f
+listGetMatchMethod	./adlist.h	70;"	d
+listIndex	./adlist.c	/^listNode *listIndex(list *list, int index) {$/;"	f
+listIter	./adlist.h	/^typedef struct listIter {$/;"	s
+listIter	./adlist.h	/^} listIter;$/;"	t	typeref:struct:listIter
+listLast	./adlist.h	59;"	d
+listLength	./adlist.h	57;"	d
+listNext	./adlist.c	/^listNode *listNext(listIter *iter)$/;"	f
+listNextNode	./adlist.h	61;"	d
+listNode	./adlist.h	/^typedef struct listNode {$/;"	s
+listNode	./adlist.h	/^} listNode;$/;"	t	typeref:struct:listNode
+listNodeValue	./adlist.h	62;"	d
+listPrevNode	./adlist.h	60;"	d
+listRelease	./adlist.c	/^void listRelease(list *list)$/;"	f
+listReleaseIterator	./adlist.c	/^void listReleaseIterator(listIter *iter) {$/;"	f
+listRewind	./adlist.c	/^void listRewind(list *list, listIter *li) {$/;"	f
+listRewindTail	./adlist.c	/^void listRewindTail(list *list, listIter *li) {$/;"	f
+listSearchKey	./adlist.c	/^listNode *listSearchKey(list *list, void *key)$/;"	f
+listSetDupMethod	./adlist.h	64;"	d
+listSetFreeMethod	./adlist.h	65;"	d
+listSetMatchMethod	./adlist.h	66;"	d
+liveclients	./redis-benchmark.c	/^    int liveclients;$/;"	m	struct:config	file:
+llenCommand	./redis.c	/^static void llenCommand(redisClient *c) {$/;"	f	file:
+loadAppendOnlyFile	./redis.c	/^int loadAppendOnlyFile(char *filename) {$/;"	f
+loadDoubleValue	./redis-check-dump.c	/^double* loadDoubleValue() {$/;"	f
+loadEntry	./redis-check-dump.c	/^entry loadEntry() {$/;"	f
+loadIntegerObject	./redis-check-dump.c	/^char *loadIntegerObject(int enctype) {$/;"	f
+loadLength	./redis-check-dump.c	/^uint32_t loadLength(int *isencoded) {$/;"	f
+loadLzfStringObject	./redis-check-dump.c	/^char* loadLzfStringObject() {$/;"	f
+loadPair	./redis-check-dump.c	/^int loadPair(entry *e) {$/;"	f
+loadServerConfig	./redis.c	/^static void loadServerConfig(char *filename) {$/;"	f	file:
+loadStringObject	./redis-check-dump.c	/^char* loadStringObject() {$/;"	f
+loadType	./redis-check-dump.c	/^int loadType(entry *e) {$/;"	f
+lockThreadedIO	./redis.c	/^static void lockThreadedIO(void) {$/;"	f	file:
+logfile	./redis.c	/^    char *logfile;$/;"	m	struct:redisServer	file:
+lookupCommand	./redis-cli.c	/^static struct redisCommand *lookupCommand(char *name) {$/;"	f	file:
+lookupCommand	./redis.c	/^static struct redisCommand *lookupCommand(char *name) {$/;"	f	file:
+lookupKey	./redis.c	/^static robj *lookupKey(redisDb *db, robj *key) {$/;"	f	file:
+lookupKeyByPattern	./redis.c	/^static robj *lookupKeyByPattern(redisDb *db, robj *pattern, robj *subst) {$/;"	f	file:
+lookupKeyRead	./redis.c	/^static robj *lookupKeyRead(redisDb *db, robj *key) {$/;"	f	file:
+lookupKeyReadOrReply	./redis.c	/^static robj *lookupKeyReadOrReply(redisClient *c, robj *key, robj *reply) {$/;"	f	file:
+lookupKeyWrite	./redis.c	/^static robj *lookupKeyWrite(redisDb *db, robj *key) {$/;"	f	file:
+lookupKeyWriteOrReply	./redis.c	/^static robj *lookupKeyWriteOrReply(redisClient *c, robj *key, robj *reply) {$/;"	f	file:
+loop	./redis-benchmark.c	/^    int loop;$/;"	m	struct:config	file:
+lpopCommand	./redis.c	/^static void lpopCommand(redisClient *c) {$/;"	f	file:
+lpushCommand	./redis.c	/^static void lpushCommand(redisClient *c) {$/;"	f	file:
+lrangeCommand	./redis.c	/^static void lrangeCommand(redisClient *c) {$/;"	f	file:
+lremCommand	./redis.c	/^static void lremCommand(redisClient *c) {$/;"	f	file:
+lsetCommand	./redis.c	/^static void lsetCommand(redisClient *c) {$/;"	f	file:
+ltrimCommand	./redis.c	/^static void ltrimCommand(redisClient *c) {$/;"	f	file:
+lzf_compress	./lzf_c.c	/^lzf_compress (const void *const in_data, unsigned int in_len,$/;"	f
+lzf_decompress	./lzf_d.c	/^lzf_decompress (const void *const in_data,  unsigned int in_len,$/;"	f
+main	./redis-benchmark.c	/^int main(int argc, char **argv) {$/;"	f
+main	./redis-check-dump.c	/^int main(int argc, char **argv) {$/;"	f
+main	./redis-cli.c	/^int main(int argc, char **argv) {$/;"	f
+main	./redis.c	/^int main(int argc, char **argv) {$/;"	f
+main	./test-redis.tcl	/^proc main {server port} {$/;"	p
+main	./zipmap.c	/^int main(void) {$/;"	f
+mask	./ae.h	/^    int mask; \/* one of AE_(READABLE|WRITABLE) *\/$/;"	m	struct:aeFileEvent
+mask	./ae.h	/^    int mask;$/;"	m	struct:aeFiredEvent
+master	./redis.c	/^    redisClient *master;    \/* client that is master for this slave *\/$/;"	m	struct:redisServer	file:
+masterauth	./redis.c	/^    char *masterauth;$/;"	m	struct:redisServer	file:
+masterhost	./redis.c	/^    char *masterhost;$/;"	m	struct:redisServer	file:
+masterport	./redis.c	/^    int masterport;$/;"	m	struct:redisServer	file:
+match	./adlist.h	/^    int (*match)(void *ptr, void *key);$/;"	m	struct:list
+maxclients	./redis.c	/^    unsigned int maxclients;$/;"	m	struct:redisServer	file:
+maxfd	./ae.h	/^    int maxfd;$/;"	m	struct:aeEventLoop
+maxidletime	./redis.c	/^    int maxidletime;$/;"	m	struct:redisServer	file:
+maxmemory	./redis.c	/^    unsigned long long maxmemory;$/;"	m	struct:redisServer	file:
+mbargc	./redis.c	/^    int argc, mbargc;$/;"	m	struct:redisClient	file:
+mbargv	./redis.c	/^    robj **argv, **mbargv;$/;"	m	struct:redisClient	file:
+mbulk	./redis-benchmark.c	/^    int mbulk;          \/* Number of elements in an mbulk reply *\/$/;"	m	struct:_client	file:
+med3	./pqsort.c	/^med3(char *a, char *b, char *c,$/;"	f	file:
+mgetCommand	./redis.c	/^static void mgetCommand(redisClient *c) {$/;"	f	file:
+min	./pqsort.c	50;"	d	file:
+monitorCommand	./redis.c	/^static void monitorCommand(redisClient *c) {$/;"	f	file:
+monitors	./redis.c	/^    list *slaves, *monitors;$/;"	m	struct:redisServer	file:
+moveCommand	./redis.c	/^static void moveCommand(redisClient *c) {$/;"	f	file:
+msetCommand	./redis.c	/^static void msetCommand(redisClient *c) {$/;"	f	file:
+msetGenericCommand	./redis.c	/^static void msetGenericCommand(redisClient *c, int nx) {$/;"	f	file:
+msetnxCommand	./redis.c	/^static void msetnxCommand(redisClient *c) {$/;"	f	file:
+mstate	./redis.c	/^    multiState mstate;      \/* MULTI\/EXEC state *\/$/;"	m	struct:redisClient	file:
+mstime	./redis-benchmark.c	/^static long long mstime(void) {$/;"	f	file:
+multiCmd	./redis.c	/^typedef struct multiCmd {$/;"	s	file:
+multiCmd	./redis.c	/^} multiCmd;$/;"	t	typeref:struct:multiCmd	file:
+multiCommand	./redis.c	/^static void multiCommand(redisClient *c) {$/;"	f	file:
+multiState	./redis.c	/^typedef struct multiState {$/;"	s	file:
+multiState	./redis.c	/^} multiState;$/;"	t	typeref:struct:multiState	file:
+multibulk	./redis.c	/^    int multibulk;          \/* multi bulk command format active *\/$/;"	m	struct:redisClient	file:
+name	./redis-cli.c	/^    char *name;$/;"	m	struct:redisCommand	file:
+name	./redis.c	/^    char *name;$/;"	m	struct:redisCommand	file:
+name	./redis.c	/^    char *name;$/;"	m	struct:redisFunctionSym	file:
+neterr	./redis.c	/^    char neterr[ANET_ERR_LEN];$/;"	m	struct:redisServer	file:
+next	./adlist.h	/^    listNode *next;$/;"	m	struct:listIter
+next	./adlist.h	/^    struct listNode *next;$/;"	m	struct:listNode	typeref:struct:listNode::listNode
+next	./ae.h	/^    struct aeTimeEvent *next;$/;"	m	struct:aeTimeEvent	typeref:struct:aeTimeEvent::aeTimeEvent
+next	./dict.h	/^    struct dictEntry *next;$/;"	m	struct:dictEntry	typeref:struct:dictEntry::dictEntry
+nextEntry	./dict.h	/^    dictEntry *entry, *nextEntry;$/;"	m	struct:dictIterator
+nokeyerr	./redis.c	/^    *emptymultibulk, *wrongtypeerr, *nokeyerr, *syntaxerr, *sameobjecterr,$/;"	m	struct:sharedObjectsStruct	file:
+nullbulk	./redis.c	/^    *colon, *nullbulk, *nullmultibulk, *queued,$/;"	m	struct:sharedObjectsStruct	file:
+nullmultibulk	./redis.c	/^    *colon, *nullbulk, *nullmultibulk, *queued,$/;"	m	struct:sharedObjectsStruct	file:
+numclients	./redis-benchmark.c	/^    int numclients;$/;"	m	struct:config	file:
+obj	./redis.c	/^    robj *obj;$/;"	m	struct:_redisSortObject	file:
+obj	./redis.c	/^    robj *obj;$/;"	m	struct:zskiplistNode	file:
+obj_freelist_mutex	./redis.c	/^    pthread_mutex_t obj_freelist_mutex; \/* safe redis objects creation\/free *\/$/;"	m	struct:redisServer	file:
+objfreelist	./redis.c	/^    list *objfreelist;          \/* A list of freed objects to avoid malloc() *\/$/;"	m	struct:redisServer	file:
+obuf	./redis-benchmark.c	/^    sds obuf;$/;"	m	struct:_client	file:
+offset	./redis-check-dump.c	/^    unsigned long offset;$/;"	m	struct:__anon3	file:
+offset	./redis-check-dump.c	/^    unsigned long offset[16];$/;"	m	struct:__anon4	file:
+ok	./redis.c	/^    robj *crlf, *ok, *err, *emptybulk, *czero, *cone, *pong, *space,$/;"	m	struct:sharedObjectsStruct	file:
+oom	./redis.c	/^static void oom(const char *msg) {$/;"	f	file:
+outofrangeerr	./redis.c	/^    *outofrangeerr, *plus,$/;"	m	struct:sharedObjectsStruct	file:
+page	./redis.c	/^    off_t page;         \/* the page at witch the object is stored on disk *\/$/;"	m	struct:redisObjectVM	file:
+page	./redis.c	/^    off_t page; \/* Swap page where to read\/write the object *\/$/;"	m	struct:iojob	file:
+pages	./redis.c	/^    off_t pages; \/* Swap pages needed to safe object. PREPARE_SWAP return val *\/$/;"	m	struct:iojob	file:
+parseOptions	./redis-benchmark.c	/^void parseOptions(int argc, char **argv) {$/;"	f
+parseOptions	./redis-cli.c	/^static int parseOptions(int argc, char **argv) {$/;"	f	file:
+pattern	./redis.c	/^    robj *pattern;$/;"	m	struct:_redisSortOperation	file:
+peekType	./redis-check-dump.c	/^int peekType() {$/;"	f
+pidfile	./redis.c	/^    char *pidfile;$/;"	m	struct:redisServer	file:
+pingCommand	./redis.c	/^static void pingCommand(redisClient *c) {$/;"	f	file:
+plus	./redis.c	/^    *outofrangeerr, *plus,$/;"	m	struct:sharedObjectsStruct	file:
+pointer	./redis.c	/^    unsigned long pointer;$/;"	m	struct:redisFunctionSym	file:
+pong	./redis.c	/^    robj *crlf, *ok, *err, *emptybulk, *czero, *cone, *pong, *space,$/;"	m	struct:sharedObjectsStruct	file:
+popGenericCommand	./redis.c	/^static void popGenericCommand(redisClient *c, int where) {$/;"	f	file:
+port	./redis.c	/^    int port;$/;"	m	struct:redisServer	file:
+pos	./redis-check-dump.c	/^} pos;$/;"	t	typeref:struct:__anon3	file:
+positions	./redis-check-dump.c	/^static pos positions[16];$/;"	v	file:
+pqsort	./pqsort.c	/^pqsort(void *a, size_t n, size_t es,$/;"	f
+prepareClientForReply	./redis-benchmark.c	/^static void prepareClientForReply(client c, int type) {$/;"	f	file:
+prepareForBenchmark	./redis-benchmark.c	/^static void prepareForBenchmark(void)$/;"	f	file:
+prev	./adlist.h	/^    struct listNode *prev;$/;"	m	struct:listNode	typeref:struct:listNode::listNode
+printCentered	./redis-check-dump.c	/^void printCentered(int indent, int width, char* body) {$/;"	f
+printErrorStack	./redis-check-dump.c	/^void printErrorStack(entry *e) {$/;"	f
+printSkipped	./redis-check-dump.c	/^void printSkipped(int bytes, int offset) {$/;"	f
+printValid	./redis-check-dump.c	/^void printValid(int ops, int bytes) {$/;"	f
+privdata	./dict.h	/^    void *privdata;$/;"	m	struct:dict
+proc	./redis.c	/^    redisCommandProc *proc;$/;"	m	struct:redisCommand	file:
+process	./redis-check-dump.c	/^void process() {$/;"	f
+processCommand	./redis.c	/^static int processCommand(redisClient *c) {$/;"	f	file:
+processDoubleValue	./redis-check-dump.c	/^int processDoubleValue(double** store) {$/;"	f
+processHeader	./redis-check-dump.c	/^int processHeader() {$/;"	f
+processInputBuffer	./redis.c	/^static void processInputBuffer(redisClient *c) {$/;"	f	file:
+processStringObject	./redis-check-dump.c	/^int processStringObject(char** store) {$/;"	f
+processTime	./redis-check-dump.c	/^int processTime() {$/;"	f
+processTimeEvents	./ae.c	/^static int processTimeEvents(aeEventLoop *eventLoop) {$/;"	f	file:
+prompt	./redis-cli.c	/^static char *prompt(char *line, int size) {$/;"	f	file:
+ptr	./redis.c	/^    void *ptr;$/;"	m	struct:redisObject	file:
+pushGenericCommand	./redis.c	/^static void pushGenericCommand(redisClient *c, int where) {$/;"	f	file:
+qsortCompareSetsByCardinality	./redis.c	/^static int qsortCompareSetsByCardinality(const void *s1, const void *s2) {$/;"	f	file:
+qsortCompareZsetopsrcByCardinality	./redis.c	/^static int qsortCompareZsetopsrcByCardinality(const void *s1, const void *s2) {$/;"	f	file:
+querybuf	./redis.c	/^    sds querybuf;$/;"	m	struct:redisClient	file:
+queueIOJob	./redis.c	/^static void queueIOJob(iojob *j) {$/;"	f	file:
+queueMultiCommand	./redis.c	/^static void queueMultiCommand(redisClient *c, struct redisCommand *cmd) {$/;"	f	file:
+queued	./redis.c	/^    *colon, *nullbulk, *nullmultibulk, *queued,$/;"	m	struct:sharedObjectsStruct	file:
+quiet	./redis-benchmark.c	/^    int quiet;$/;"	m	struct:config	file:
+randomInt	./test-redis.tcl	/^proc randomInt {max} {$/;"	p
+randomKey	./test-redis.tcl	/^proc randomKey {} {$/;"	p
+randomValue	./test-redis.tcl	/^proc randomValue {} {$/;"	p
+randomizeClientKey	./redis-benchmark.c	/^static void randomizeClientKey(client c) {$/;"	f	file:
+randomkeyCommand	./redis.c	/^static void randomkeyCommand(redisClient *c) {$/;"	f	file:
+randomkeys	./redis-benchmark.c	/^    int randomkeys;$/;"	m	struct:config	file:
+randomkeys_keyspacelen	./redis-benchmark.c	/^    int randomkeys_keyspacelen;$/;"	m	struct:config	file:
+randpath	./test-redis.tcl	/^proc randpath args {$/;"	p
+randstring	./test-redis.tcl	/^proc randstring {min max {type binary}} {$/;"	p
+rdbLoad	./redis.c	/^static int rdbLoad(char *filename) {$/;"	f	file:
+rdbLoadDoubleValue	./redis.c	/^static int rdbLoadDoubleValue(FILE *fp, double *val) {$/;"	f	file:
+rdbLoadIntegerObject	./redis.c	/^static robj *rdbLoadIntegerObject(FILE *fp, int enctype) {$/;"	f	file:
+rdbLoadLen	./redis.c	/^static uint32_t rdbLoadLen(FILE *fp, int *isencoded) {$/;"	f	file:
+rdbLoadLzfStringObject	./redis.c	/^static robj *rdbLoadLzfStringObject(FILE*fp) {$/;"	f	file:
+rdbLoadObject	./redis.c	/^static robj *rdbLoadObject(int type, FILE *fp) {$/;"	f	file:
+rdbLoadStringObject	./redis.c	/^static robj *rdbLoadStringObject(FILE*fp) {$/;"	f	file:
+rdbLoadTime	./redis.c	/^static time_t rdbLoadTime(FILE *fp) {$/;"	f	file:
+rdbLoadType	./redis.c	/^static int rdbLoadType(FILE *fp) {$/;"	f	file:
+rdbRemoveTempFile	./redis.c	/^static void rdbRemoveTempFile(pid_t childpid) {$/;"	f	file:
+rdbSave	./redis.c	/^static int rdbSave(char *filename) {$/;"	f	file:
+rdbSaveBackground	./redis.c	/^static int rdbSaveBackground(char *filename) {$/;"	f	file:
+rdbSaveDoubleValue	./redis.c	/^static int rdbSaveDoubleValue(FILE *fp, double val) {$/;"	f	file:
+rdbSaveLen	./redis.c	/^static int rdbSaveLen(FILE *fp, uint32_t len) {$/;"	f	file:
+rdbSaveLzfStringObject	./redis.c	/^static int rdbSaveLzfStringObject(FILE *fp, unsigned char *s, size_t len) {$/;"	f	file:
+rdbSaveObject	./redis.c	/^static int rdbSaveObject(FILE *fp, robj *o) {$/;"	f	file:
+rdbSaveRawString	./redis.c	/^static int rdbSaveRawString(FILE *fp, unsigned char *s, size_t len) {$/;"	f	file:
+rdbSaveStringObject	./redis.c	/^static int rdbSaveStringObject(FILE *fp, robj *obj) {$/;"	f	file:
+rdbSaveTime	./redis.c	/^static int rdbSaveTime(FILE *fp, time_t t) {$/;"	f	file:
+rdbSaveType	./redis.c	/^static int rdbSaveType(FILE *fp, unsigned char type) {$/;"	f	file:
+rdbSavedObjectLen	./redis.c	/^static off_t rdbSavedObjectLen(robj *o, FILE *fp) {$/;"	f	file:
+rdbSavedObjectPages	./redis.c	/^static off_t rdbSavedObjectPages(robj *o, FILE *fp) {$/;"	f	file:
+rdbTryIntegerEncoding	./redis.c	/^static int rdbTryIntegerEncoding(char *s, size_t len, unsigned char *enc) {$/;"	f	file:
+rdbcompression	./redis.c	/^    int rdbcompression;$/;"	m	struct:redisServer	file:
+readArgFromStdin	./redis-cli.c	/^static sds readArgFromStdin(void) {$/;"	f	file:
+readBytes	./redis-check-dump.c	/^int readBytes(void *target, long num) {$/;"	f
+readHandler	./redis-benchmark.c	/^static void readHandler(aeEventLoop *el, int fd, void *privdata, int mask)$/;"	f	file:
+readQueryFromClient	./redis.c	/^static void readQueryFromClient(aeEventLoop *el, int fd, void *privdata, int mask) {$/;"	f	file:
+readlen	./redis-benchmark.c	/^    int readlen;        \/* readlen == -1 means read a single line *\/$/;"	m	struct:_client	file:
+redis	./redis.tcl	/^proc redis {{server 127.0.0.1} {port 6379}} {$/;"	p
+redisAssert	./redis.c	238;"	d	file:
+redisClient	./redis.c	/^typedef struct redisClient {$/;"	s	file:
+redisClient	./redis.c	/^} redisClient;$/;"	t	typeref:struct:redisClient	file:
+redisCommand	./redis-cli.c	/^struct redisCommand {$/;"	s	file:
+redisCommand	./redis.c	/^struct redisCommand {$/;"	s	file:
+redisCommandProc	./redis.c	/^typedef void redisCommandProc(redisClient *c);$/;"	t	file:
+redisDb	./redis.c	/^typedef struct redisDb {$/;"	s	file:
+redisDb	./redis.c	/^} redisDb;$/;"	t	typeref:struct:redisDb	file:
+redisFunctionSym	./redis.c	/^struct redisFunctionSym {$/;"	s	file:
+redisLog	./redis.c	/^static void redisLog(int level, const char *fmt, ...) {$/;"	f	file:
+redisObject	./redis.c	/^typedef struct redisObject {$/;"	s	file:
+redisObjectVM	./redis.c	/^struct redisObjectVM {$/;"	s	file:
+redisServer	./redis.c	/^struct redisServer {$/;"	s	file:
+redisSortObject	./redis.c	/^} redisSortObject;$/;"	t	typeref:struct:_redisSortObject	file:
+redisSortOperation	./redis.c	/^} redisSortOperation;$/;"	t	typeref:struct:_redisSortOperation	file:
+redis_fstat	./config.h	17;"	d
+redis_fstat	./config.h	20;"	d
+redis_malloc_size	./config.h	12;"	d
+redis_stat	./config.h	18;"	d
+redis_stat	./config.h	21;"	d
+refcount	./redis.c	/^    int refcount;$/;"	m	struct:redisObject	file:
+removeExpire	./redis.c	/^static int removeExpire(redisDb *db, robj *key) {$/;"	f	file:
+renameCommand	./redis.c	/^static void renameCommand(redisClient *c) {$/;"	f	file:
+renameGenericCommand	./redis.c	/^static void renameGenericCommand(redisClient *c, int nx) {$/;"	f	file:
+renamenxCommand	./redis.c	/^static void renamenxCommand(redisClient *c) {$/;"	f	file:
+repeat	./redis-cli.c	/^    long repeat;$/;"	m	struct:config	file:
+repl	./redis-cli.c	/^static void repl() {$/;"	f	file:
+repldbfd	./redis.c	/^    int repldbfd;           \/* replication DB file descriptor *\/$/;"	m	struct:redisClient	file:
+repldboff	./redis.c	/^    long repldboff;         \/* replication DB file offset *\/$/;"	m	struct:redisClient	file:
+repldbsize	./redis.c	/^    off_t repldbsize;       \/* replication DB file size *\/$/;"	m	struct:redisClient	file:
+replicationFeedSlaves	./redis.c	/^static void replicationFeedSlaves(list *slaves, struct redisCommand *cmd, int dictid, robj **argv, int argc) {$/;"	f	file:
+replstate	./redis.c	/^    int replstate;          \/* replication state if this is a slave *\/$/;"	m	struct:redisClient	file:
+replstate	./redis.c	/^    int replstate;$/;"	m	struct:redisServer	file:
+reply	./redis.c	/^    list *reply;$/;"	m	struct:redisClient	file:
+replytype	./redis-benchmark.c	/^    int replytype;$/;"	m	struct:_client	file:
+requests	./redis-benchmark.c	/^    int requests;$/;"	m	struct:config	file:
+requirepass	./redis.c	/^    char *requirepass;$/;"	m	struct:redisServer	file:
+resetClient	./redis-benchmark.c	/^static void resetClient(client c) {$/;"	f	file:
+resetClient	./redis.c	/^static void resetClient(redisClient *c) {$/;"	f	file:
+resetServerSaveParams	./redis.c	/^static void resetServerSaveParams() {$/;"	f	file:
+rewriteAppendOnlyFile	./redis.c	/^static int rewriteAppendOnlyFile(char *filename) {$/;"	f	file:
+rewriteAppendOnlyFileBackground	./redis.c	/^static int rewriteAppendOnlyFileBackground(void) {$/;"	f	file:
+rfds	./ae_select.c	/^    fd_set rfds, wfds;$/;"	m	struct:aeApiState	file:
+rfileProc	./ae.h	/^    aeFileProc *rfileProc;$/;"	m	struct:aeFileEvent
+robj	./redis.c	/^} robj;$/;"	t	typeref:struct:redisObject	file:
+rpopCommand	./redis.c	/^static void rpopCommand(redisClient *c) {$/;"	f	file:
+rpoplpushcommand	./redis.c	/^static void rpoplpushcommand(redisClient *c) {$/;"	f	file:
+rpushCommand	./redis.c	/^static void rpushCommand(redisClient *c) {$/;"	f	file:
+saddCommand	./redis.c	/^static void saddCommand(redisClient *c) {$/;"	f	file:
+sameobjecterr	./redis.c	/^    *emptymultibulk, *wrongtypeerr, *nokeyerr, *syntaxerr, *sameobjecterr,$/;"	m	struct:sharedObjectsStruct	file:
+saveCommand	./redis.c	/^static void saveCommand(redisClient *c) {$/;"	f	file:
+saveparam	./redis.c	/^struct saveparam {$/;"	s	file:
+saveparams	./redis.c	/^    struct saveparam *saveparams;$/;"	m	struct:redisServer	typeref:struct:redisServer::saveparam	file:
+saveparamslen	./redis.c	/^    int saveparamslen;$/;"	m	struct:redisServer	file:
+scardCommand	./redis.c	/^static void scardCommand(redisClient *c) {$/;"	f	file:
+score	./redis.c	/^        double score;$/;"	m	union:_redisSortObject::__anon1	file:
+score	./redis.c	/^    double score;$/;"	m	struct:zskiplistNode	file:
+sdiffCommand	./redis.c	/^static void sdiffCommand(redisClient *c) {$/;"	f	file:
+sdiffstoreCommand	./redis.c	/^static void sdiffstoreCommand(redisClient *c) {$/;"	f	file:
+sds	./sds.h	/^typedef char *sds;$/;"	t
+sdsDictKeyCompare	./redis.c	/^static int sdsDictKeyCompare(void *privdata, const void *key1,$/;"	f	file:
+sdsMakeRoomFor	./sds.c	/^static sds sdsMakeRoomFor(sds s, size_t addlen) {$/;"	f	file:
+sdsOomAbort	./sds.c	/^static void sdsOomAbort(void) {$/;"	f	file:
+sdsavail	./sds.c	/^size_t sdsavail(sds s) {$/;"	f
+sdscat	./sds.c	/^sds sdscat(sds s, char *t) {$/;"	f
+sdscatlen	./sds.c	/^sds sdscatlen(sds s, void *t, size_t len) {$/;"	f
+sdscatprintf	./sds.c	/^sds sdscatprintf(sds s, const char *fmt, ...) {$/;"	f
+sdscmp	./sds.c	/^int sdscmp(sds s1, sds s2) {$/;"	f
+sdscpy	./sds.c	/^sds sdscpy(sds s, char *t) {$/;"	f
+sdscpylen	./sds.c	/^sds sdscpylen(sds s, char *t, size_t len) {$/;"	f
+sdsdup	./sds.c	/^sds sdsdup(const sds s) {$/;"	f
+sdsempty	./sds.c	/^sds sdsempty(void) {$/;"	f
+sdsfree	./sds.c	/^void sdsfree(sds s) {$/;"	f
+sdshdr	./sds.h	/^struct sdshdr {$/;"	s
+sdslen	./sds.c	/^size_t sdslen(const sds s) {$/;"	f
+sdsnew	./sds.c	/^sds sdsnew(const char *init) {$/;"	f
+sdsnewlen	./sds.c	/^sds sdsnewlen(const void *init, size_t initlen) {$/;"	f
+sdsrange	./sds.c	/^sds sdsrange(sds s, long start, long end) {$/;"	f
+sdssplitlen	./sds.c	/^sds *sdssplitlen(char *s, int len, char *sep, int seplen, int *count) {$/;"	f
+sdstolower	./sds.c	/^void sdstolower(sds s) {$/;"	f
+sdstoupper	./sds.c	/^void sdstoupper(sds s) {$/;"	f
+sdstrim	./sds.c	/^sds sdstrim(sds s, const char *cset) {$/;"	f
+sdsupdatelen	./sds.c	/^void sdsupdatelen(sds s) {$/;"	f
+seconds	./redis.c	/^    time_t seconds;$/;"	m	struct:saveparam	file:
+segvHandler	./redis.c	/^static void segvHandler(int sig, siginfo_t *info, void *secret) {$/;"	f	file:
+select0	./redis.c	/^    *select0, *select1, *select2, *select3, *select4,$/;"	m	struct:sharedObjectsStruct	file:
+select1	./redis.c	/^    *select0, *select1, *select2, *select3, *select4,$/;"	m	struct:sharedObjectsStruct	file:
+select2	./redis.c	/^    *select0, *select1, *select2, *select3, *select4,$/;"	m	struct:sharedObjectsStruct	file:
+select3	./redis.c	/^    *select0, *select1, *select2, *select3, *select4,$/;"	m	struct:sharedObjectsStruct	file:
+select4	./redis.c	/^    *select0, *select1, *select2, *select3, *select4,$/;"	m	struct:sharedObjectsStruct	file:
+select5	./redis.c	/^    *select5, *select6, *select7, *select8, *select9;$/;"	m	struct:sharedObjectsStruct	file:
+select6	./redis.c	/^    *select5, *select6, *select7, *select8, *select9;$/;"	m	struct:sharedObjectsStruct	file:
+select7	./redis.c	/^    *select5, *select6, *select7, *select8, *select9;$/;"	m	struct:sharedObjectsStruct	file:
+select8	./redis.c	/^    *select5, *select6, *select7, *select8, *select9;$/;"	m	struct:sharedObjectsStruct	file:
+select9	./redis.c	/^    *select5, *select6, *select7, *select8, *select9;$/;"	m	struct:sharedObjectsStruct	file:
+selectCommand	./redis.c	/^static void selectCommand(redisClient *c) {$/;"	f	file:
+selectDb	./redis-cli.c	/^static int selectDb(int fd) {$/;"	f	file:
+selectDb	./redis.c	/^static int selectDb(redisClient *c, int id) {$/;"	f	file:
+sendBulkToSlave	./redis.c	/^static void sendBulkToSlave(aeEventLoop *el, int fd, void *privdata, int mask) {$/;"	f	file:
+sendReplyToClient	./redis.c	/^static void sendReplyToClient(aeEventLoop *el, int fd, void *privdata, int mask) {$/;"	f	file:
+sendReplyToClientWritev	./redis.c	/^static void sendReplyToClientWritev(aeEventLoop *el, int fd, void *privdata, int mask)$/;"	f	file:
+sentlen	./redis.c	/^    int sentlen;$/;"	m	struct:redisClient	file:
+server	./redis.c	/^static struct redisServer server; \/* server global state *\/$/;"	v	typeref:struct:redisServer	file:
+serverCron	./redis.c	/^static int serverCron(struct aeEventLoop *eventLoop, long long id, void *clientData) {$/;"	f	file:
+setCommand	./redis.c	/^static void setCommand(redisClient *c) {$/;"	f	file:
+setDictType	./redis.c	/^static dictType setDictType = {$/;"	v	file:
+setExpire	./redis.c	/^static int setExpire(redisDb *db, robj *key, time_t when) {$/;"	f	file:
+setGenericCommand	./redis.c	/^static void setGenericCommand(redisClient *c, int nx) {$/;"	f	file:
+setnxCommand	./redis.c	/^static void setnxCommand(redisClient *c) {$/;"	f	file:
+setupSigSegvAction	./redis.c	/^static void setupSigSegvAction(void) {$/;"	f	file:
+shared	./redis.c	/^} shared;$/;"	v	typeref:struct:sharedObjectsStruct
+sharedObjectsStruct	./redis.c	/^struct sharedObjectsStruct {$/;"	s	file:
+shareobjects	./redis.c	/^    int shareobjects;$/;"	m	struct:redisServer	file:
+sharingpool	./redis.c	/^    dict *sharingpool;          \/* Poll used for object sharing *\/$/;"	m	struct:redisServer	file:
+sharingpoolsize	./redis.c	/^    unsigned int sharingpoolsize;$/;"	m	struct:redisServer	file:
+showLatencyReport	./redis-benchmark.c	/^static void showLatencyReport(char *title) {$/;"	f	file:
+shutdownCommand	./redis.c	/^static void shutdownCommand(redisClient *c) {$/;"	f	file:
+sinterCommand	./redis.c	/^static void sinterCommand(redisClient *c) {$/;"	f	file:
+sinterGenericCommand	./redis.c	/^static void sinterGenericCommand(redisClient *c, robj **setskeys, unsigned long setsnum, robj *dstkey) {$/;"	f	file:
+sinterstoreCommand	./redis.c	/^static void sinterstoreCommand(redisClient *c) {$/;"	f	file:
+sismemberCommand	./redis.c	/^static void sismemberCommand(redisClient *c) {$/;"	f	file:
+size	./dict.h	/^    unsigned long size;$/;"	m	struct:dict
+size	./redis-check-dump.c	/^    unsigned long size;$/;"	m	struct:__anon3	file:
+sizemask	./dict.h	/^    unsigned long sizemask;$/;"	m	struct:dict
+slaveofCommand	./redis.c	/^static void slaveofCommand(redisClient *c) {$/;"	f	file:
+slaves	./redis.c	/^    list *slaves, *monitors;$/;"	m	struct:redisServer	file:
+slaveseldb	./redis.c	/^    int slaveseldb;         \/* slave selected db, if this client is a slave *\/$/;"	m	struct:redisClient	file:
+smoveCommand	./redis.c	/^static void smoveCommand(redisClient *c) {$/;"	f	file:
+sortCommand	./redis.c	/^static void sortCommand(redisClient *c) {$/;"	f	file:
+sortCompare	./redis.c	/^static int sortCompare(const void *s1, const void *s2) {$/;"	f	file:
+sort_alpha	./redis.c	/^    int sort_alpha;$/;"	m	struct:redisServer	file:
+sort_bypattern	./redis.c	/^    int sort_bypattern;$/;"	m	struct:redisServer	file:
+sort_desc	./redis.c	/^    int sort_desc;$/;"	m	struct:redisServer	file:
+space	./redis.c	/^    robj *crlf, *ok, *err, *emptybulk, *czero, *cone, *pong, *space,$/;"	m	struct:sharedObjectsStruct	file:
+span	./redis.c	/^    unsigned int *span;$/;"	m	struct:zskiplistNode	file:
+spawnIOThread	./redis.c	/^static void spawnIOThread(void) {$/;"	f	file:
+spopCommand	./redis.c	/^static void spopCommand(redisClient *c) {$/;"	f	file:
+srandmemberCommand	./redis.c	/^static void srandmemberCommand(redisClient *c) {$/;"	f	file:
+sremCommand	./redis.c	/^static void sremCommand(redisClient *c) {$/;"	f	file:
+start	./redis-benchmark.c	/^    long long start;    \/* start time in milliseconds *\/$/;"	m	struct:_client	file:
+start	./redis-benchmark.c	/^    long long start;$/;"	m	struct:config	file:
+stat_numcommands	./redis.c	/^    long long stat_numcommands;    \/* number of processed commands *\/$/;"	m	struct:redisServer	file:
+stat_numconnections	./redis.c	/^    long long stat_numconnections; \/* number of connections received *\/$/;"	m	struct:redisServer	file:
+stat_starttime	./redis.c	/^    time_t stat_starttime;         \/* server start time *\/$/;"	m	struct:redisServer	file:
+state	./redis-benchmark.c	/^    int state;$/;"	m	struct:_client	file:
+stop	./ae.h	/^    int stop;$/;"	m	struct:aeEventLoop
+storage	./redis.c	/^    unsigned char storage;  \/* If this object is a key, where is the value?$/;"	m	struct:redisObject	file:
+strencoding	./redis.c	/^static char* strencoding[] = {$/;"	v	file:
+stress	./test-redis.tcl	/^proc stress {} {$/;"	p
+stringObjectLen	./redis.c	/^static size_t stringObjectLen(robj *o) {$/;"	f	file:
+stringmatchlen	./redis.c	/^int stringmatchlen(const char *pattern, int patternLen,$/;"	f
+substrCommand	./redis.c	/^static void substrCommand(redisClient *c) {$/;"	f	file:
+success	./redis-check-dump.c	/^    char success;$/;"	m	struct:__anon5	file:
+sunionCommand	./redis.c	/^static void sunionCommand(redisClient *c) {$/;"	f	file:
+sunionDiffGenericCommand	./redis.c	/^static void sunionDiffGenericCommand(redisClient *c, robj **setskeys, int setsnum, robj *dstkey, int op) {$/;"	f	file:
+sunionstoreCommand	./redis.c	/^static void sunionstoreCommand(redisClient *c) {$/;"	f	file:
+swap	./pqsort.c	79;"	d	file:
+swapcode	./pqsort.c	55;"	d	file:
+swapfunc	./pqsort.c	/^swapfunc(char *a, char *b, size_t n, int swaptype)$/;"	f	file:
+symsTable	./staticsymbols.h	/^static struct redisFunctionSym symsTable[] = {$/;"	v	typeref:struct:redisFunctionSym
+syncCommand	./redis.c	/^static void syncCommand(redisClient *c) {$/;"	f	file:
+syncRead	./redis.c	/^static int syncRead(int fd, char *ptr, ssize_t size, int timeout) {$/;"	f	file:
+syncReadLine	./redis.c	/^static int syncReadLine(int fd, char *ptr, ssize_t size, int timeout) {$/;"	f	file:
+syncWithMaster	./redis.c	/^static int syncWithMaster(void) {$/;"	f	file:
+syncWrite	./redis.c	/^static int syncWrite(int fd, char *ptr, ssize_t size, int timeout) {$/;"	f	file:
+syntaxerr	./redis.c	/^    *emptymultibulk, *wrongtypeerr, *nokeyerr, *syntaxerr, *sameobjecterr,$/;"	m	struct:sharedObjectsStruct	file:
+table	./dict.h	/^    dictEntry **table;$/;"	m	struct:dict
+tail	./adlist.h	/^    listNode *tail;$/;"	m	struct:list
+tail	./redis.c	/^    struct zskiplistNode *header, *tail;$/;"	m	struct:zskiplist	typeref:struct:zskiplist::	file:
+test	./test-redis.tcl	/^proc test {name code okpattern} {$/;"	p
+thread	./redis.c	/^    pthread_t thread; \/* ID of the thread processing this entry *\/$/;"	m	struct:iojob	file:
+timeEventHead	./ae.h	/^    aeTimeEvent *timeEventHead;$/;"	m	struct:aeEventLoop
+timeEventNextId	./ae.h	/^    long long timeEventNextId;$/;"	m	struct:aeEventLoop
+timeProc	./ae.h	/^    aeTimeProc *timeProc;$/;"	m	struct:aeTimeEvent
+totlatency	./redis-benchmark.c	/^    long long totlatency;$/;"	m	struct:config	file:
+totreceived	./redis-benchmark.c	/^    int totreceived;$/;"	m	struct:_client	file:
+tryFreeOneObjectFromFreelist	./redis.c	/^static int tryFreeOneObjectFromFreelist(void) {$/;"	f	file:
+tryObjectEncoding	./redis.c	/^static int tryObjectEncoding(robj *o) {$/;"	f	file:
+tryObjectSharing	./redis.c	/^static robj *tryObjectSharing(robj *o) {$/;"	f	file:
+tryResizeHashTables	./redis.c	/^static void tryResizeHashTables(void) {$/;"	f	file:
+ttlCommand	./redis.c	/^static void ttlCommand(redisClient *c) {$/;"	f	file:
+type	./dict.h	/^    dictType *type;$/;"	m	struct:dict
+type	./redis-check-dump.c	/^    int type;$/;"	m	struct:__anon5	file:
+type	./redis.c	/^    int type;   \/* Request type, REDIS_IOJOB_* *\/$/;"	m	struct:iojob	file:
+type	./redis.c	/^    int type;$/;"	m	struct:_redisSortOperation	file:
+type	./redis.c	/^    unsigned char type;$/;"	m	struct:redisObject	file:
+typeCommand	./redis.c	/^static void typeCommand(redisClient *c) {$/;"	f	file:
+types	./redis-check-dump.c	/^static char types[256][16];$/;"	v	file:
+u	./redis.c	/^    } u;$/;"	m	struct:_redisSortObject	typeref:union:_redisSortObject::__anon1	file:
+u16	./lzfP.h	/^    typedef unsigned int u16;$/;"	t
+u16	./lzfP.h	/^    typedef unsigned short u16;$/;"	t
+u8	./lzfP.h	/^typedef unsigned char u8;$/;"	t
+uname_S	./Makefile	/^uname_S := $(shell sh -c 'uname -s 2>\/dev\/null || echo not')$/;"	m
+unblockClientWaitingData	./redis.c	/^static void unblockClientWaitingData(redisClient *c) {$/;"	f	file:
+unixtime	./redis.c	/^    time_t unixtime;    \/* Unix time sampled every second. *\/$/;"	m	struct:redisServer	file:
+unlockThreadedIO	./redis.c	/^static void unlockThreadedIO(void) {$/;"	f	file:
+updateSlavesWaitingBgsave	./redis.c	/^static void updateSlavesWaitingBgsave(int bgsaveerr) {$/;"	f	file:
+usage	./redis-cli.c	/^static void usage() {$/;"	f	file:
+used	./dict.h	/^    unsigned long used;$/;"	m	struct:dict
+used_memory	./zmalloc.c	/^static size_t used_memory = 0;$/;"	v	file:
+used_memory_mutex	./zmalloc.c	/^pthread_mutex_t used_memory_mutex = PTHREAD_MUTEX_INITIALIZER;$/;"	v
+usedpages	./redis.c	/^    off_t usedpages;    \/* number of pages used on disk *\/$/;"	m	struct:redisObjectVM	file:
+val	./dict.h	/^    void *val;$/;"	m	struct:dictEntry
+val	./redis.c	/^    robj *val;  \/* the value to swap for REDIS_IOREQ_*_SWAP, otherwise this$/;"	m	struct:iojob	file:
+valDestructor	./dict.h	/^    void (*valDestructor)(void *privdata, void *obj);$/;"	m	struct:dictType
+valDup	./dict.h	/^    void *(*valDup)(void *privdata, const void *obj);$/;"	m	struct:dictType
+value	./adlist.h	/^    void *value;$/;"	m	struct:listNode
+vecswap	./pqsort.c	87;"	d	file:
+verbosity	./redis.c	/^    int verbosity;$/;"	m	struct:redisServer	file:
+vm	./redis.c	/^    struct redisObjectVM vm;$/;"	m	struct:redisObject	typeref:struct:redisObject::redisObjectVM	file:
+vm	./redis.c	/^} vm;$/;"	v	typeref:struct:redisObjectVM
+vmCanSwapOut	./redis.c	/^static int vmCanSwapOut(void) {$/;"	f	file:
+vmCancelThreadedIOJob	./redis.c	/^static void vmCancelThreadedIOJob(robj *o) {$/;"	f	file:
+vmFindContiguousPages	./redis.c	/^static int vmFindContiguousPages(off_t *first, off_t n) {$/;"	f	file:
+vmFreePage	./redis.c	/^static int vmFreePage(off_t page) {$/;"	f	file:
+vmGenericLoadObject	./redis.c	/^static robj *vmGenericLoadObject(robj *key, int preview) {$/;"	f	file:
+vmInit	./redis.c	/^static void vmInit(void) {$/;"	f	file:
+vmLoadObject	./redis.c	/^static robj *vmLoadObject(robj *key) {$/;"	f	file:
+vmMarkPageFree	./redis.c	/^static void vmMarkPageFree(off_t page) {$/;"	f	file:
+vmMarkPageUsed	./redis.c	/^static void vmMarkPageUsed(off_t page) {$/;"	f	file:
+vmMarkPagesFree	./redis.c	/^static void vmMarkPagesFree(off_t page, off_t count) {$/;"	f	file:
+vmMarkPagesUsed	./redis.c	/^static void vmMarkPagesUsed(off_t page, off_t count) {$/;"	f	file:
+vmPreviewObject	./redis.c	/^static robj *vmPreviewObject(robj *key) {$/;"	f	file:
+vmReadObjectFromSwap	./redis.c	/^static robj *vmReadObjectFromSwap(off_t page, int type) {$/;"	f	file:
+vmReopenSwapFile	./redis.c	/^static void vmReopenSwapFile(void) {$/;"	f	file:
+vmSwapObjectBlocking	./redis.c	/^static int vmSwapObjectBlocking(robj *key, robj *val) {$/;"	f	file:
+vmSwapObjectThreaded	./redis.c	/^static int vmSwapObjectThreaded(robj *key, robj *val, redisDb *db) {$/;"	f	file:
+vmSwapOneObject	./redis.c	/^static int vmSwapOneObject(int usethreads) {$/;"	f	file:
+vmSwapOneObjectBlocking	./redis.c	/^static int vmSwapOneObjectBlocking() {$/;"	f	file:
+vmSwapOneObjectThreaded	./redis.c	/^static int vmSwapOneObjectThreaded() {$/;"	f	file:
+vmThreadedIOCompletedJob	./redis.c	/^static void vmThreadedIOCompletedJob(aeEventLoop *el, int fd, void *privdata,$/;"	f	file:
+vmWriteObjectOnSwap	./redis.c	/^static int vmWriteObjectOnSwap(robj *o, off_t page) {$/;"	f	file:
+vm_bitmap	./redis.c	/^    unsigned char *vm_bitmap; \/* Bitmap of free\/used pages *\/$/;"	m	struct:redisServer	file:
+vm_blocked_clients	./redis.c	/^    unsigned int vm_blocked_clients;$/;"	m	struct:redisServer	file:
+vm_enabled	./redis.c	/^    int vm_enabled;$/;"	m	struct:redisServer	file:
+vm_fd	./redis.c	/^    int vm_fd;$/;"	m	struct:redisServer	file:
+vm_firstkey	./redis.c	/^    int vm_firstkey; \/* The first argument that's a key (0 = no keys) *\/$/;"	m	struct:redisCommand	file:
+vm_fp	./redis.c	/^    FILE *vm_fp;$/;"	m	struct:redisServer	file:
+vm_keystep	./redis.c	/^    int vm_keystep;  \/* The step between first and last key *\/$/;"	m	struct:redisCommand	file:
+vm_lastkey	./redis.c	/^    int vm_lastkey;  \/* THe last argument that's a key *\/$/;"	m	struct:redisCommand	file:
+vm_max_memory	./redis.c	/^    unsigned long long vm_max_memory;$/;"	m	struct:redisServer	file:
+vm_max_threads	./redis.c	/^    int vm_max_threads; \/* Max number of I\/O threads running at the same time *\/$/;"	m	struct:redisServer	file:
+vm_near_pages	./redis.c	/^    off_t vm_near_pages; \/* Number of pages allocated sequentially *\/$/;"	m	struct:redisServer	file:
+vm_next_page	./redis.c	/^    off_t vm_next_page; \/* Next probably empty page *\/$/;"	m	struct:redisServer	file:
+vm_page_size	./redis.c	/^    off_t vm_page_size;$/;"	m	struct:redisServer	file:
+vm_pages	./redis.c	/^    off_t vm_pages;$/;"	m	struct:redisServer	file:
+vm_preload_proc	./redis.c	/^    redisCommandProc *vm_preload_proc;$/;"	m	struct:redisCommand	file:
+vm_stats_swapins	./redis.c	/^    unsigned long long vm_stats_swapins;$/;"	m	struct:redisServer	file:
+vm_stats_swapouts	./redis.c	/^    unsigned long long vm_stats_swapouts;$/;"	m	struct:redisServer	file:
+vm_stats_swapped_objects	./redis.c	/^    unsigned long long vm_stats_swapped_objects;$/;"	m	struct:redisServer	file:
+vm_stats_used_pages	./redis.c	/^    unsigned long long vm_stats_used_pages;$/;"	m	struct:redisServer	file:
+vm_swap_file	./redis.c	/^    char *vm_swap_file;$/;"	m	struct:redisServer	file:
+vtype	./redis.c	/^    unsigned char vtype; \/* If this object is a key, and value is swapped out,$/;"	m	struct:redisObject	file:
+waitEmptyIOJobsQueue	./redis.c	/^static void waitEmptyIOJobsQueue(void) {$/;"	f	file:
+waitForBgrewriteaof	./test-redis.tcl	/^proc waitForBgrewriteaof r {$/;"	p
+waitForBgsave	./test-redis.tcl	/^proc waitForBgsave r {$/;"	p
+waitForSwappedKey	./redis.c	/^static int waitForSwappedKey(redisClient *c, robj *key) {$/;"	f	file:
+weight	./redis.c	/^    double weight;$/;"	m	struct:__anon2	file:
+wfds	./ae_select.c	/^    fd_set rfds, wfds;$/;"	m	struct:aeApiState	file:
+wfileProc	./ae.h	/^    aeFileProc *wfileProc;$/;"	m	struct:aeFileEvent
+when_ms	./ae.h	/^    long when_ms; \/* milliseconds *\/$/;"	m	struct:aeTimeEvent
+when_sec	./ae.h	/^    long when_sec; \/* seconds *\/$/;"	m	struct:aeTimeEvent
+writeHandler	./redis-benchmark.c	/^static void writeHandler(aeEventLoop *el, int fd, void *privdata, int mask)$/;"	f	file:
+written	./redis-benchmark.c	/^    unsigned int written;        \/* bytes of 'obuf' already written *\/$/;"	m	struct:_client	file:
+wrongtypeerr	./redis.c	/^    *emptymultibulk, *wrongtypeerr, *nokeyerr, *syntaxerr, *sameobjecterr,$/;"	m	struct:sharedObjectsStruct	file:
+yesnotoi	./redis.c	/^static int yesnotoi(char *s) {$/;"	f	file:
+zaddCommand	./redis.c	/^static void zaddCommand(redisClient *c) {$/;"	f	file:
+zaddGenericCommand	./redis.c	/^static void zaddGenericCommand(redisClient *c, robj *key, robj *ele, double scoreval, int doincrement) {$/;"	f	file:
+zcardCommand	./redis.c	/^static void zcardCommand(redisClient *c) {$/;"	f	file:
+zcountCommand	./redis.c	/^static void zcountCommand(redisClient *c) {$/;"	f	file:
+zfree	./zmalloc.c	/^void zfree(void *ptr) {$/;"	f
+zincrbyCommand	./redis.c	/^static void zincrbyCommand(redisClient *c) {$/;"	f	file:
+zinterCommand	./redis.c	/^static void zinterCommand(redisClient *c) {$/;"	f	file:
+zipmapDecodeLength	./zipmap.c	/^static unsigned int zipmapDecodeLength(unsigned char *p) {$/;"	f	file:
+zipmapDel	./zipmap.c	/^unsigned char *zipmapDel(unsigned char *zm, unsigned char *key, unsigned int klen, int *deleted) {$/;"	f
+zipmapEncodeLength	./zipmap.c	/^static unsigned int zipmapEncodeLength(unsigned char *p, unsigned int len) {$/;"	f	file:
+zipmapExists	./zipmap.c	/^int zipmapExists(unsigned char *zm, unsigned char *key, unsigned int klen) {$/;"	f
+zipmapGet	./zipmap.c	/^int zipmapGet(unsigned char *zm, unsigned char *key, unsigned int klen, unsigned char **value, unsigned int *vlen) {$/;"	f
+zipmapLen	./zipmap.c	/^unsigned int zipmapLen(unsigned char *zm) {$/;"	f
+zipmapLookupRaw	./zipmap.c	/^static unsigned char *zipmapLookupRaw(unsigned char *zm, unsigned char *key, unsigned int klen, unsigned int *totlen, unsigned int *freeoff, unsigned int *freelen) {$/;"	f	file:
+zipmapNew	./zipmap.c	/^unsigned char *zipmapNew(void) {$/;"	f
+zipmapNext	./zipmap.c	/^unsigned char *zipmapNext(unsigned char *zm, unsigned char **key, unsigned int *klen, unsigned char **value, unsigned int *vlen) {$/;"	f
+zipmapRawEntryLength	./zipmap.c	/^static unsigned int zipmapRawEntryLength(unsigned char *p) {$/;"	f	file:
+zipmapRawKeyLength	./zipmap.c	/^static unsigned int zipmapRawKeyLength(unsigned char *p) {$/;"	f	file:
+zipmapRawValueLength	./zipmap.c	/^static unsigned int zipmapRawValueLength(unsigned char *p) {$/;"	f	file:
+zipmapRepr	./zipmap.c	/^void zipmapRepr(unsigned char *p) {$/;"	f
+zipmapRequiredLength	./zipmap.c	/^static unsigned long zipmapRequiredLength(unsigned int klen, unsigned int vlen) {$/;"	f	file:
+zipmapRewind	./zipmap.c	/^unsigned char *zipmapRewind(unsigned char *zm) {$/;"	f
+zipmapSet	./zipmap.c	/^unsigned char *zipmapSet(unsigned char *zm, unsigned char *key, unsigned int klen, unsigned char *val, unsigned int vlen, int *update) {$/;"	f
+zlistAlikeSort	./test-redis.tcl	/^proc zlistAlikeSort {a b} {$/;"	p
+zmalloc	./zmalloc.c	/^void *zmalloc(size_t size) {$/;"	f
+zmalloc_enable_thread_safeness	./zmalloc.c	/^void zmalloc_enable_thread_safeness(void) {$/;"	f
+zmalloc_oom	./zmalloc.c	/^static void zmalloc_oom(size_t size) {$/;"	f	file:
+zmalloc_thread_safe	./zmalloc.c	/^static int zmalloc_thread_safe = 0;$/;"	v	file:
+zmalloc_used_memory	./zmalloc.c	/^size_t zmalloc_used_memory(void) {$/;"	f
+zrangeCommand	./redis.c	/^static void zrangeCommand(redisClient *c) {$/;"	f	file:
+zrangeGenericCommand	./redis.c	/^static void zrangeGenericCommand(redisClient *c, int reverse) {$/;"	f	file:
+zrangebyscoreCommand	./redis.c	/^static void zrangebyscoreCommand(redisClient *c) {$/;"	f	file:
+zrankCommand	./redis.c	/^static void zrankCommand(redisClient *c) {$/;"	f	file:
+zrankGenericCommand	./redis.c	/^static void zrankGenericCommand(redisClient *c, int reverse) {$/;"	f	file:
+zrealloc	./zmalloc.c	/^void *zrealloc(void *ptr, size_t size) {$/;"	f
+zremCommand	./redis.c	/^static void zremCommand(redisClient *c) {$/;"	f	file:
+zremrangebyrankCommand	./redis.c	/^static void zremrangebyrankCommand(redisClient *c) {$/;"	f	file:
+zremrangebyscoreCommand	./redis.c	/^static void zremrangebyscoreCommand(redisClient *c) {$/;"	f	file:
+zrevrangeCommand	./redis.c	/^static void zrevrangeCommand(redisClient *c) {$/;"	f	file:
+zrevrankCommand	./redis.c	/^static void zrevrankCommand(redisClient *c) {$/;"	f	file:
+zscoreCommand	./redis.c	/^static void zscoreCommand(redisClient *c) {$/;"	f	file:
+zset	./redis.c	/^typedef struct zset {$/;"	s	file:
+zset	./redis.c	/^} zset;$/;"	t	typeref:struct:zset	file:
+zsetDictType	./redis.c	/^static dictType zsetDictType = {$/;"	v	file:
+zsetopsrc	./redis.c	/^} zsetopsrc;$/;"	t	typeref:struct:__anon2	file:
+zskiplist	./redis.c	/^typedef struct zskiplist {$/;"	s	file:
+zskiplist	./redis.c	/^} zskiplist;$/;"	t	typeref:struct:zskiplist	file:
+zskiplistNode	./redis.c	/^typedef struct zskiplistNode {$/;"	s	file:
+zskiplistNode	./redis.c	/^} zskiplistNode;$/;"	t	typeref:struct:zskiplistNode	file:
+zsl	./redis.c	/^    zskiplist *zsl;$/;"	m	struct:zset	file:
+zslCreate	./redis.c	/^static zskiplist *zslCreate(void) {$/;"	f	file:
+zslCreateNode	./redis.c	/^static zskiplistNode *zslCreateNode(int level, double score, robj *obj) {$/;"	f	file:
+zslDelete	./redis.c	/^static int zslDelete(zskiplist *zsl, double score, robj *obj) {$/;"	f	file:
+zslDeleteNode	./redis.c	/^void zslDeleteNode(zskiplist *zsl, zskiplistNode *x, zskiplistNode **update) {$/;"	f
+zslDeleteRangeByRank	./redis.c	/^static unsigned long zslDeleteRangeByRank(zskiplist *zsl, unsigned int start, unsigned int end, dict *dict) {$/;"	f	file:
+zslDeleteRangeByScore	./redis.c	/^static unsigned long zslDeleteRangeByScore(zskiplist *zsl, double min, double max, dict *dict) {$/;"	f	file:
+zslFirstWithScore	./redis.c	/^static zskiplistNode *zslFirstWithScore(zskiplist *zsl, double score) {$/;"	f	file:
+zslFree	./redis.c	/^static void zslFree(zskiplist *zsl) {$/;"	f	file:
+zslFreeNode	./redis.c	/^static void zslFreeNode(zskiplistNode *node) {$/;"	f	file:
+zslGetElementByRank	./redis.c	/^zskiplistNode* zslGetElementByRank(zskiplist *zsl, unsigned long rank) {$/;"	f
+zslGetRank	./redis.c	/^static unsigned long zslGetRank(zskiplist *zsl, double score, robj *o) {$/;"	f	file:
+zslInsert	./redis.c	/^static void zslInsert(zskiplist *zsl, double score, robj *obj) {$/;"	f	file:
+zslRandomLevel	./redis.c	/^static int zslRandomLevel(void) {$/;"	f	file:
+zstrdup	./zmalloc.c	/^char *zstrdup(const char *s) {$/;"	f
+zunionCommand	./redis.c	/^static void zunionCommand(redisClient *c) {$/;"	f	file:
+zunionInterAggregate	./redis.c	/^inline static void zunionInterAggregate(double *target, double val, int aggregate) {$/;"	f	file:
+zunionInterBlockClientOnSwappedKeys	./redis.c	/^static void zunionInterBlockClientOnSwappedKeys(redisClient *c) {$/;"	f	file:
+zunionInterGenericCommand	./redis.c	/^static void zunionInterGenericCommand(redisClient *c, robj *dstkey, int op) {$/;"	f	file:

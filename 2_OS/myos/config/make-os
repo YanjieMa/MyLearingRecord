@@ -1,0 +1,4 @@
+OS_ARCH := i686
+OS_NAME = myos
+OS_BIN = $(OS_NAME).bin
+OS_ISO = $(OS_NAME).iso

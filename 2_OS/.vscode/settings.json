@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "gdt.h": "c",
+        "types.h": "c"
+    }
+}

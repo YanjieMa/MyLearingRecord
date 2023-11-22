@@ -1,0 +1,194 @@
+
+
+预处理： cpp
+	gcc -E main.c -o main.i
+	预处理器	cpp main.c -o main.i
+
+编译器：cc1
+	gcc -S main.c -o main.s
+	C编译器	cc -S main.c -o main.s
+
+汇编：as
+	gcc -c main.c -o main.o   --> ELF
+	as -c main.s -o main.o
+
+链接： ld
+                     --> EOF	
+
+
+1.ELF header
+整个ELF文件的前64个字节，成为ELF头，可以通过readelf -h [fileName]来查看。
+root@cloud p2_Link]# readelf -h main.o
+ELF Header:
+  Magic:   7f 45 4c 46 02 01 01 00 00 00 00 00 00 00 00 00
+  Class:                             ELF64
+  Data:                              2's complement, little endian
+  Version:                           1 (current)
+  OS/ABI:                            UNIX - System V   -- 操作系统是UNIX
+  ABI Version:                       0
+  Type:                              REL (Relocatable file)
+  Machine:                           Advanced Micro Devices X86-64
+  Version:                           0x1
+  Entry point address:               0x0
+  Start of program headers:          0 (bytes into file)
+  Start of section headers:          1064 (bytes into file)  -- section header从1064开始
+  Flags:                             0x0
+  Size of this header:               64 (bytes)
+  Size of program headers:           0 (bytes)
+  Number of program headers:         0
+  Size of section headers:           64 (bytes)  -- 每个section header 0x40个字节
+  Number of section headers:         13			 -- section header table 共有 13 个 section header
+  Section header string table index: 10			 -- string section header index 10
+
+参数 Type 有:
+名词		     属性			注解
+ET_NONE		未知类型		 这个标记表明了文件类型不确定或者还未定义
+ET_REL		重定位文件	 如果elf文件标记为了relocatable那么意味着该文件被标记为了一段可冲定位的代码，也称为目标文件。
+						可重定位目标文件通常是还未被链接到可执行程序的一段位置独立代码的代码（position independent code）。
+						在编译完代码之后通常可以看到一个.o的格式的文件，这种文件包含了创建可执行文件所需要的代码和数据。
+ET_EXEC		可执行文件	 elf文件如果为executable,那么表明了这个文件被标记为了可执行文件。这种类型的文件也成为程序，是一个进程开始执行的入口。
+ET_DYN		共享目标文件	 ELF类型如果为dynamic意味着该文件被标记为了一个动态的可链接的目标文件，也称为共享库。
+						这类共享库会在程序运行的时候被装载并且链接到程序的进程镜像中。
+ET_CORE		核心文件		 在进程崩溃或者进程传递了一个SIGSEGV信号（分段违规）时，会在核心文件中记录整个进程的镜像信息。
+						可以使用GDB读取这类文件来辅助调试并且查找程序崩溃的原因。
+
+#define EI_NIDENT 16
+typedef struct
+{
+    unsigned char e_ident[EI_NIDENT];
+    uint16_t e_type;                    ；表示文件的类型，这里为3 就是ET_DYN类型
+    uint16_t e_machine;                 ；表示平台的版本，我使用gcc编译所以标识 intel 8086
+    uint32_t e_version;                 ; 表示版本号
+    ElfN_Addr e_entry;					; 重要字段标识了入口点位置程序的第一行代码位置
+    ElfN_Off e_phoff;                   ; 重要，标识了program table的在文件的偏移开始位置
+    ElfN_Off e_shoff;                   ；section header table的偏移位置
+    uint32_t e_flags;                   ；保存与文件相关 特定于处理器的标识。
+    uint16_t e_ehsize;
+    uint16_t e_phentsize;              ；重要字段，表明了program table 每个结构体的大小           
+    uint16_t e_phnum;                  ；重要字段，表明programtable有多少项
+    uint16_t e_shentsize;              ；表明了sectiontable每一项结构有多大
+    uint16_t e_shnum;                  ；表明了sectiontable有多少项
+    uint16_t e_shstrndx;               ；节区头部表格中与节区名称字符串相关的表项的索引。
+} ElfN_Ehdr;
+
+
+
+
+
+2.ELF section
+在我们的ELF文件中，有两张重要的表：节头部表（Section Tables）和程序头表（Program Headers）。可以通过readelf -S [fileName]和readelf -l [fileName]来查看。
+root@cloud p2_Link]# readelf -S main.o
+There are 13 section headers, starting at offset 0x428:
+ Section Headers:
+  [Nr] Name              Type             Address           Offset
+       Size              EntSize          Flags  Link  Info  Align
+  [ 0]                   NULL             0000000000000000  00000000
+       0000000000000000  0000000000000000           0     0     0
+  [ 1] .text             PROGBITS         0000000000000000  00000040
+       0000000000000059  0000000000000000  AX       0     0     1
+  [ 2] .rela.text        RELA             0000000000000000  00000338
+       00000000000000d8  0000000000000018   I      11     1     8
+  [ 3] .data             PROGBITS         0000000000000000  0000009c
+       0000000000000008  0000000000000000  WA       0     0     4
+  [ 4] .bss              NOBITS           0000000000000000  000000a4
+       0000000000000008  0000000000000000  WA       0     0     4
+  [ 5] .rodata           PROGBITS         0000000000000000  000000a4
+       0000000000000011  0000000000000000   A       0     0     1
+  [ 6] .comment          PROGBITS         0000000000000000  000000b5
+       0000000000000013  0000000000000001  MS       0     0     1
+  [ 7] .note.GNU-stack   PROGBITS         0000000000000000  000000c8
+       0000000000000000  0000000000000000           0     0     1
+  [ 8] .eh_frame         PROGBITS         0000000000000000  000000c8
+       0000000000000038  0000000000000000   A       0     0     8
+  [ 9] .rela.eh_frame    RELA             0000000000000000  00000410
+       0000000000000018  0000000000000018   I      11     8     8
+  [10] .shstrtab         STRTAB           0000000000000000  00000100
+       0000000000000061  0000000000000000           0     0     1
+  [11] .symtab           SYMTAB           0000000000000000  00000168
+       0000000000000180  0000000000000018          12    11     8
+  [12] .strtab           STRTAB           0000000000000000  000002e8
+       000000000000004c  0000000000000000           0     0     1
+Key to Flags:
+  W (write), A (alloc), X (execute), M (merge), S (strings), l (large)
+  I (info), L (link order), G (group), T (TLS), E (exclude), x (unknown)
+  O (extra OS processing required) o (OS specific), p (processor specific)
+
+typedef struct {
+    Elf64_Half    sh_name;    /* section name */
+    Elf64_Half    sh_type;    /* section type */
+    Elf64_Xword    sh_flags;    /* section flags */
+    Elf64_Addr    sh_addr;    /* virtual address */
+    Elf64_Off    sh_offset;    /* file offset */
+    Elf64_Xword    sh_size;    /* section size */
+    Elf64_Half    sh_link;    /* link to another */
+    Elf64_Half    sh_info;    /* misc info */
+    Elf64_Xword    sh_addralign;    /* memory alignment */
+    Elf64_Xword    sh_entsize;    /* table entry size */
+} Elf64_Shdr;
+
+
+名称	意义
+.text	已编译程序的机器代码
+.rodata	只读数据
+.data	已初始化的全局变量和静态变量
+.bss	未初始化的全局变量和静态变量
+.symtab	一个符号表，存放在程序中定义和引用的函数和全局变量的信息
+.rel.text	一个.text节中位置的列表，当链接器把其他文件和目标文件组合时，需要修改这些位置
+.rel.data	被模块引用或定义的所有全局变量的重定位信息
+.debug	一个调试符号表，其条目是程序中定义的局部变量和类型定义，需要-g才有
+.line	原始C源程序中的行号和.text节中机器指令的映射，需要-g才有
+.strtab	一个字符串表
+
+
+Section
+[root@cloud p2_Link]# readelf main.o -s
+Symbol table '.symtab' contains 16 entries:
+   Num:    Value          Size Type    Bind   Vis      Ndx Name
+     0: 0000000000000000     0 NOTYPE  LOCAL  DEFAULT  UND
+     1: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS main.c
+     2: 0000000000000000     0 SECTION LOCAL  DEFAULT    1
+     3: 0000000000000000     0 SECTION LOCAL  DEFAULT    3
+     4: 0000000000000000     0 SECTION LOCAL  DEFAULT    4
+     5: 0000000000000004     4 OBJECT  LOCAL  DEFAULT    4 _ZZ4mainE3ret
+     6: 0000000000000004     4 OBJECT  LOCAL  DEFAULT    3 _ZZ4mainE4sum1
+     7: 0000000000000000     0 SECTION LOCAL  DEFAULT    5
+     8: 0000000000000000     0 SECTION LOCAL  DEFAULT    7
+     9: 0000000000000000     0 SECTION LOCAL  DEFAULT    8
+    10: 0000000000000000     0 SECTION LOCAL  DEFAULT    6
+    11: 0000000000000000     4 OBJECT  GLOBAL DEFAULT    3 global
+    12: 0000000000000000     4 OBJECT  GLOBAL DEFAULT    4 global_0
+    13: 0000000000000000    89 FUNC    GLOBAL DEFAULT    1 main
+    14: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND _Z5myaddii
+    15: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND printf
+
+.shstrtab和.strtab这两个Section中存放的都是ASCII码：
+可见.shstrtab中保存着各Section的名字，.strtab中保存着程序中用到的符号的名字。每个名字都是以'\0'结尾的字符串。
+根据section header 和 .shstrtab可以找到 header的名称。
+C语言的全局变量如果在代码中没有初始化，就会在程序加载时用0初始化。
+这种数据属于.bss段，在加载时它和.data段一样都是可读可写的数据，
+但是在ELF文件中.data段需要占用一部分空间保存初始值，而.bss段则不需要。
+也就是说，.bss段在文件中只占一个Section Header而没有对应的Section，
+程序加载时.bss段占多大内存空间在Section Header中描述。
+.rel.text告诉链接器指令中的哪些地方需要重定位。
+ymtab是符号表。Ndx列是每个符号所在的Section编号,Value列是每个符号所代表的地址，在目标文件中，符号地址都是相对于该符号所在Section的相对地址。
+
+
+typedef struct {
+    Elf64_Half    p_type;        /* entry type */
+    Elf64_Half    p_flags;    /* flags */
+    Elf64_Off    p_offset;    /* offset */
+    Elf64_Addr    p_vaddr;    /* virtual address */
+    Elf64_Addr    p_paddr;    /* physical address */
+    Elf64_Xword    p_filesz;    /* file size */
+    Elf64_Xword    p_memsz;    /* memory size */
+    Elf64_Xword    p_align;    /* memory & file alignment */
+} Elf64_Phdr;
+字段	含义
+p_type	描述了段的而类型
+p_offset	描述了从文件到该段的文件偏移
+p_vaddr	描述了段在内存中的偏移
+p_paddr	描述了物理地址相关，在应用层无作用。
+p_filesz	p_offset描述了段在文件中的偏移。那么此成员就描述了在文件中所占的大小，可以为0
+p_memsz	同上，描述了内存中映像所占的字节数。 可以为0
+p_flags	此成员描述了段的标志
+p_align	描述了对齐。对于可加载的段 p_vaddr和p_offset取值必须是合适的。此成员给出了段在文件中和内存中如何对齐。数值 0 1 标识不需要对齐。否则就必须是2的倍数。 p_vaddr和p_offset在取模后应该相等。

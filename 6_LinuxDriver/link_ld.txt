@@ -1,0 +1,160 @@
+
+连接器：
+	把一个或多个输入文件合并成一个输出文件，输入文件是目标文件或者链接脚本文件，输出文件是目标文件（库文件）或者可执行文件，链接器从链接脚本读完一个 section 后，将定位器符号的值增加该 section 的大小。
+链接脚本：
+	链接脚本的一个主要目的是描述输入文件中的各个段(数据段,代码段,堆,栈,bss)如何被映射到输出文件中,并控制输出文件的各部分在程序地址空间内的布局，地址空间包括 ROM 和 RAM。
+链接器总是使用链接脚本的，如果你不提供，则链接器会使用一个缺省的脚本，这个脚本是被编译进链接器可执行文件的。
+
+常用关键字：
+	ENTRY
+		ENTRY关键字用于定义应用程序的入口点，即输出文件中的第一条可执行指令。该关键字接受链接程序/内核入口点的符号名作为单个参数。
+		ENTRY(SYMBOL) : 将符号SYMBOL的值设置成入口地址。
+		ENTRY(entry_point) : 是指进程执行的第一条用户空间的指令在进程地址空间的地址
+		ld有多种方法设置进程入口地址, 按一下顺序: (编号越前, 优先级越高)
+			1、ld命令行的-e选项
+			2、链接脚本的ENTRY(SYMBOL)命令
+			3、如果定义了start符号, 使用start符号值
+			4、如果存在.text section, 使用.text section的第一字节的位置值
+			5、使用值0
+	OUTPUT_FORMAT
+		OUTPUT_FORMAT(elf64-x86-64)
+		OUTPUT_FORMAT("pe-i386")
+		OUTPUT_FORMAT指令只接受一个参数。它指定可执行文件的输出格式。要了解系统binutils和GCC支持哪些输出格式，可以使用objdump  -i命令。
+	STARTUP
+		STARTUP(Boot.o)
+		STARTUP(crt0.o)
+		它是要链接到可执行文件开头的文件。对于userland项目，这通常是crt0.o或crtbegin.o; 对于内核，通常是包含程序集样板的文件启动堆栈，
+		在某些情况下是GDT之类的，然后调用kernel_main() 。
+	SEARCH_DIR
+		SEARCH_DIR(Directory)
+		这将为您的库搜索目录添加路径。-nostlib标志将导致在该路径中找到的任何库被有效忽略。我不知道为什么，这似乎就是ld的工作原理:
+		它将链接器脚本指定的搜索目录视为标准目录，因此会忽略它们,而不使用默认的libs和此类标志路径。
+	INPUT
+		INPUT(File1.o File2.o File3.o ...)
+		INPUT是一个“链接器脚本中”替换项，用于将对象文件添加到命令行。
+	OUTPUT
+		OUTPUT(Kernel.bin)
+		OUTPUT命令指定要生成的文件作为链接过程的输出。这是最终创建的二进制文件的名称。
+		此命令的效果与-o filename命令行标志的效果相同，后者会覆盖它。
+	MEMORY
+		MEMORY
+		{
+			ROM (rx) : ORIGIN = 0, LENGTH = 256k
+			RAM (wx) : org = 0x00100000, len = 1M
+		}
+			‘R’ Read-only section 只读段
+			‘W’ Read/write section 读写段
+			‘X’ Executable section 可执行段
+			‘A’ Allocatable section 可分配段
+			‘I’ Initialized section 初始化段
+		一旦你定义了一个内存区域，你也可以指示编译器把指定的输出段放入到这个内存区域中，使用’>REGION’设置输出段属性。
+		比如，如果你有一个名为’mem’的内存区域，你可以在输出段定义中使用’>mem’。
+		如果没有为输出段指定地址，连接器就会把地址设置为内存区域中的下一个可用的地址。
+		MEMORY声明一个或多个内存区域，其属性指定该区域是否可以写入、读取或执行。这主要用于不同地址空间区域可能包含不同访问权限.
+		上面的示例脚本告诉链接器有两个内存区域：
+			a） “ROM”从地址0x00000000开始，长度为256kB，可以读取和执行。
+			b） “RAM”从地址0x00100000开始，长度为1MB，可以写入、读取和执行。
+	REGION
+		MEMORY 定义的位置信息
+	SECTION
+		SECTIONS命令告诉ld如何把输入文件的sections映射到输出文件的各个section:;如何将输入section合为输出section;
+		如何把输出section放入程序地址空间(VMA)和进程地址空间(LMA).
+	KEEP
+		链接器脚本中的KEEP语句将指示链接器保留指定的节，即使其中没有引用任何符号。此语句在链接器脚本的节中使用。
+		当在链接时执行垃圾收集时，这一点就变得很重要，在链接命令行内使用了选项 -gc-sections 后，链接器可能将某些它认为没用的 section 过滤掉
+		，此时就有必要强制让链接器保留一些特定的 section，可用 KEEP() 关键字达此目的。说的通俗易懂就是：防止被优化。
+		SECTIONS
+		{
+			.text :
+			{
+				KEEP(*(.text.ivt))
+				*(.text.boot)
+				*(.text*)
+			} > ROM
+		}
+	PROVIDE
+		SECTIONS
+		{
+			.text :
+			{
+				*(.text)
+				_exfun = .;
+				PROVIDE(_exfun = .);
+			}
+		}
+		如果程序定义了’ _exfun ‘(带有前导下划线)，链接器将给出重复定义错误。另一方面，如果程序定义了’ exfun‘(没有前导下划线)，
+		链接器会默认使用程序中的定义。如果程序引用了’ exfun '但没有定义它，链接器将使用链接器脚本中的定义。
+		PROVIDE定义的符号，允许C语言中重定义(但是不能带前导下划线)，重定义后优先使用C中的定义。
+	TYPE
+		NOLOAD 该section在程序运行时，不被载入内存。
+
+	AT
+		section包含两个地址：VMA(virtual memory address虚拟内存地址或程序地址空间地址)和
+		LMA(load memory address加载内存地址或进程地址空间地址)。默认情况下 LMA 等于 VMA，但可以通过关键字 AT() 指定 LMA。
+		用关键字 AT()指定，括号内包含表达式，表达式的值用于设置LMA。如果不用AT()关键字，那么可用AT>LMA_REGION表达式设置指定
+		该section加载地址的范围。这个属性主要用于构件ROM境象。
+		一般而言, 某section的VMA == LMA. 但在嵌入式系统中, 经常存在加载地址和执行地址不同的情况:
+		 比如将输出文件加载到开发板的flash中(由LMA指定), 而在运行时将位于flash中的输出文件复制到SDRAM中(由VMA指定)。
+		SECTIONS
+		{
+			.text 0×1000 : 
+				{_etext = . ;*(.text);  }
+			.mdata 0×2000 : AT ( ADDR (.text) + SIZEOF (.text) )
+				{ _data = . ; *(.data); _edata = . ; }
+			.bss 0×3000 :
+				{ _bstart = . ; *(.bss) *(COMMON) ; _bend = . ;}
+		}
+	ALIGN
+		表示字节对齐， 如 “ . = ALIGN(4);”表示从该地址开始后面的存储进行4字节对齐。
+
+	实例：
+		SECTIONS
+		{		
+			. = ORIGION(RAM0);  /*设置当前位置计数器 . 的值*/
+	
+			.text /*输出段名*/
+			{
+				*start.o(StartUp)
+				*(.text)
+				*(.rodata)
+			} >RAM0 AT>FLASH
+	
+			.bss (NOLOAD) : SUBALIGN(0x10)
+			{
+				PROVIDE(_bss_begin = ABSOLUTE(.));
+				*(.bss )
+				PROVIDE(_bss_over = ABSOLUTE(.));
+			} >RAM0 AT>FLASH
+	
+			/*标准格式如下*/
+			section-name [address] [(type)] :
+			[AT(lma)]
+			[ALIGN(section_align)]
+			[SUBALIGN(subsection_align)]
+			[constraint]
+			{
+				output-section-command
+				output-section-command
+				...
+			} [>region] [AT>lma_region] [:phdr :phdr ...] [=fillexp]
+		}	
+
+	ABSOLUTE(EXP) ：转换成绝对值
+	ADDR(SECTION) ：返回某section的VMA值。
+	SIZEOF(SECTION) ：返回SECTION的大小。当SECTION没有被分配时，即此时SECTION的大小还不能确定时，连接器会报错
+
+	*(.text) ：表示所有输入文件的.text section
+	*(EXCLUDE_FILE (*crtend.o) .ctors) EXCLUDE_FILE(文件列表)表示剔除指定的输入文件，即不包含这些文件的指定段。
+	*(.text .rdata) 这种方法两个段顺序是不定的。顺序是：第一个文件的.text section，第一个文件的.data section，第二个文件的...
+	*(.text) *(.rdata) 这种方法两个段顺序是固定的。
+	data.o(.data)指定某个文件的某个段
+
+	* ：表示任意多个字符
+	? ：表示任意一个字符
+	[CHARS] ：表示任意一个CHARS内的字符，可用-号表示范围，如：a-z
+	：表示引用下一个紧跟的字符
+
+
+
+
+	

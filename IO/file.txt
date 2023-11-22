@@ -1,0 +1,8 @@
+fopen func 1
+next line 100
+fopen func 1
+fopen func 1
+fopen func 1
+fopen func 1
+fopen func 1
+fopen func 1

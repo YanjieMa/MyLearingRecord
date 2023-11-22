@@ -1,0 +1,76 @@
+1.Internet Domain Socket
+	Unix Domain 数据报socket是可靠的， 但是UDP socket不可靠
+	Unix Domain 数据报socket上发送数据，会在接收socket数据满时阻塞；UDP socket进入的数据满时，使接受者队列溢出，数据报被静默的丢弃。
+2.网络字节序
+	网络字节序是 大端
+	#include <arpa/inet.h>
+	uint16_t htons(uint16_t host); 16bit类型 本地字节序 -> 网络字节序
+	uint132_t htonl(uint32_t host); 32bit
+	uint16_t ntohs(uint16_t net); 16bit类型  网络字节序 -> 本地字节序
+	uint16_t ntohl(unit32_t net); 32bit类型  本地字节序 -> 网络字节序
+3.数据表示
+	将数据变成一种标准格式，以便在网络上进行传输的过程，称为信号编集。
+	另一种特殊的方法：蒋所有传输的数据编码成文本形式，其中数据项使用特定的字符分割，特定字符通常是换行符。
+	readline函数实现	
+4.Internet Socket地址
+	struct sockaddr_in{
+		sa_family_t sin_family;
+		in_port_t sin_port;
+		struct in_addr sin_addr;
+		unsigned char __pad[X];
+	};
+	sin_addr and sin_port 都是网络字节序。
+	
+5.主机和服务转换函数
+  二进制 <=> 人类可读IPv4地址(现在不用了)
+	inet_aton
+	inet_ntoa
+  二进制 <=> 点分十进制
+	inet_pton
+	inet_ntop
+  主机和服务名 《=》二进制形式
+	getaddrinfo
+	getnameinfo
+6.inet_ntop 和 inet_pton函数
+	#include <inet/arpa.h>
+	int inet_pton(int domain, const char *src, void *addrptr);
+		return 1 on successful conversion, 0 if src int not in presentation format, or-1 on error.
+	const char *inet_ntop(int domain, const void *addrptr, char *dst, size_t len);
+		return pointer to dst, or NULL on error.
+		如果len的值太小了，返回NULL，并将errno 设置为ENOSPC， IPV4 16; IPv6 46.
+	p表示展现 presentation; n表示网络 network
+7.客户端服务器示例
+
+8.域名系统 DNS
+	/etc/hosts 中定义了 主机名 IP 的映射关系
+9. /etc/services文件
+	services name		port/protocol
+	ssh					22/tcp
+	ssh					22/udp
+10.独立于协议的主机和服务转换
+	getaddrinfo()
+	getnameinfo()
+	
+	struct addrinfo{
+		int ai_flags;
+		int ai_family;
+		int ai_socktype;
+		int ai_protocol;
+		size_t ai_addrlen;
+		char * ai_canonname;
+		struct sockaddr *ai_addr;
+		struct addrinfo *ai_next;
+	}
+	
+	获取给定主机名或服务名 对应的地址信息的结构。
+	int getaddrinfo(const char * host, const char * service, const struct addrinfo *hints, struct addrinfo **res);
+	host: 主机或IP地址的字符串， NULL则表示为本地主机
+	service： 服务名或端口号的字符串
+	hints： 制定一些筛选条件和控制选项，不指定可为NULL。
+	res: 存储返回的地址结构体链表
+	
+	void freeaddrinfo(struct addrinfo *result);
+	const char *gai_strerror(int errcode);
+	
+	int getnameinfo(const struct sockaddr *addr, socklen_t addrlen, char *host, size_t hostlen, char *service, size_t servlen, int flags);
+	

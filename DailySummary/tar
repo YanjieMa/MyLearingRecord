@@ -1,0 +1,23 @@
+
+
+tar
+	-c 产生新的包
+	-f 指定包名
+		such as : tar -cf all.tar *.jpg
+	-r 增加压缩文件
+		such as : tar -rf all.tar *.gif
+	-u 更新文件
+		such as : tar -uf all.tar logo.gif
+	-t 列出文件 查看内容
+		such as : tar -tf all.tar 列出all.tar包中的所有文件
+	-x 解压包中所有文件
+		such as : tar -xf all.tar
+	-v 显示所有过程
+
+-z .gz 文件专属
+-j .bz2 专属
+
+解压文件：
+	tar -zxvf file.tar.gz 
+压缩文件：
+	tar -zcvf file file.tar.gz

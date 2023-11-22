@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <errno.h>
+
+
+int func(int arg)
+{
+	printf("para is %d\n",arg);
+	return arg;
+}
+
+
+
+
+int main(int argc, char **argv)
+{
+	int arg;
+
+	printf("main begin...\n");
+
+	pid_t pid;
+
+	arg = 1;
+
+	pid = fork();
+	if(pid < 0){
+		perror("fork error\n");
+	}else if(pid == 0){
+		exit(func(arg));
+	}
+	
+	int status;
+	if(wait(&status) < 0){
+		perror("wait error\n");
+	}
+
+	return 0;
+}

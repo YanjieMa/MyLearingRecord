@@ -1,0 +1,78 @@
+1.概述
+	各个应用程序创建一个socket。socket是一个用于通信的“设备”，两个应用程序都需要用到它。
+	服务器将自己的socket绑定到一个众所周知的地址上（名称），是的客户端能够定位到它的位置。
+	sfd = socket(domain, type, protocol); sfd是后续在系统调用中引用该socket的文件描述符。
+  通信domain:
+	socket存在于一个通信domain中。 确定socket“地址”的格式
+	UNIX (AF_UNIX) domain  允许同一主机上的应用程序进行通信		路径名					sockaddr_un
+	IPv4 (AF_INET) domain  IPv4									32位IPv4 + 16位端口号	sockaddr_in
+	IPv6 (AF_INET6) domain IPv6									128位					sockaddr_in6
+  socket type:
+	SOCK_STREAM 流			可靠		消息边界不保留		面向连接		双向的		TCP
+	SOCK_DGRAM  数据报		不可靠		消息边界保留		不面向连接					UDP
+  socket系统调用：
+	socket()
+	bind()
+	listen()
+	accept()
+	connect()
+  socket IO:
+	read(), write();		send(), recv();			sendto(), recvfrom();
+	默认阻塞IO, fcntl F_SETFL O_NONBLOCK
+2.创建一个socket
+	#include <sys/socket.h>
+	int socket(int domain, int type, int protocol);		returns file descriptor on sucess, or -1 on error.
+	protocol 一般使用 0 ，裸socket（SPCK_RAW）使用 IPPROTO_RAW
+3.将socket绑定到地址
+	#include <sys/socket.h>
+	int bind(int sockfd, const struct sockaddr *addr, socklen_t addrlen);		Returns 0 on sucess, or -1 on error.
+4.通用socket地址结构 struct sockaddr
+	struct sockaddr{
+		sa_family_t sa_family;
+		char sa_data[14];
+	};
+	通过family字段的值，可以确定char部分地址大小和格式。
+5.流socket
+	主动socket 和 被动socket。主动：调用listen() 等待连接，被动：等待connect()主动连接。
+  listen() 系统调用将文件描述符sockfd引用的流socket标记为被动。
+	#include <sys/socket.h>
+	int listen(int sockfd, int backlog);
+	无法在一个已经连接（成功connect 或者由accept返回的socket） 执行listen()。
+	backlog 决定未决连接socket的数量。
+  accept() 在调用时不存在未决的连接，调用会阻塞知道连接请求达到为止。
+	#include <sys/socket.h>
+	int accept(int sockfd, struct sockaddr *addr, socklen_t *addrlen);  Returns file descriptor on sucess, or -1 on error.
+	如果不需要地址信息，可以分别传入 NULL 和 0，后续可以通过 getpeername() 获取。
+  connect() 连接到对等socket。
+	#include <sys/socket.h>
+	int connect(int sockfd, const struct sockaddr *addr, socklen_t addrlen);
+	如果connect()失败并希望重新连接，关闭这个socket,创建一个新的socket，在新的socket上进行连接。
+ 流 stream socket IO
+	read() write() ;  send() recv()
+	在一端关闭，另一端试图读取socket数据时，在缓冲区的文件都被读取后，会收到文件结束。
+				另一端试图写入socket数据时，会收到SIGPIPE信号，并且系统调用会返回EPIPE错误。
+  close() 终止连接
+	终止一个流socket的常用方法。多个文件描述符引用了同一个socket,所有文件描述符关闭后，连接就会终止。
+6.数据报socket
+	无法保证按照顺序到达，无法保证都能够到达，数据包可能到达多次。
+  交换数据报
+	#include <sys/socket.h>
+	ssize_t recvfrom(int sockfd, void *buf, size_t length, int flags, struct sockaddr * src_addr, socklen_t *addrlen);
+		Returns numbers of bytes received, 0 on EOF, or -1 on error.
+		在没有数据报到达时会阻塞。
+	ssize_t sendto(int sockfd, const void *buffer, size_t length, int flags, const struct sockaddr *dest_addr,socklen_t addrlen);
+		Return numbers of bytes sent, or -1 on error.
+	flag控制socket特定的IO特定。一般使用0.
+	不论length参数是什么，recvfrom()只会从一个数据报socket中读取一条消息，如果消息大小超过length字节，消息会被静默的截断为length字节。
+  数据报socket使用connect()
+	在数据报调用connect()会导致内核记录这个socket的对等socket。术语未连接的数据报就是指没有调用connect()的数据报socket。
+	数据报socket连接之后，可以用write() send()发送，会被发送到对等socket上。这个socket也只能读取对等socket的数据。
+	connect()对数据报的作用是不对称的。只适用于调用了connect()的数据报socket，并不适用于它连接的远程socket。
+	通过再次调用connect()可以修改一个已连接的数据报socket的对等socket。
+	设置对等socket的优势在于可以更简单的使用IO调用。
+		
+
+
+
+
+

@@ -1,0 +1,163 @@
+
+1.文件IO 系统IO (unbuffered IO)
+直接系统调用 无缓冲
+
+1.1 open函数
+//头文件
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+//定义
+//open 返回文件的描述符，pathname : 需要打开的文件  flags: 以读写或者其他方式打开
+int open(const char *pathname, int flags);
+int open(const char *pathname, int flags, mode_t mode);
+
+int creat(const char *pathname, mode_t mode);
+
+int openat(int dirfd, const char *pathname, int flags);
+int openat(int dirfd, const char *pathname, int flags, mode_t mode);
+
+flags:
+O_RDONLY:以只读方式打开文件
+O_WRONLY：以只写方式打开文件
+O_RDWR:以读写方式打开文件
+O_CREAT:如果文件不存在，则创建一个文件，并且需要指定文件的属性（umask）
+O_TRUNC：如果文件已经存在，并且文件可写，会把文件截断为0    
+O_APPEND：以追加写的方式写文件
+ex:
+#include <unistd.h>
+#include <error.h>
+int fd = -1;
+fd = open("path", O_RDWR);
+if(fd == -1);
+printf("fd = %d, error:%d %s", fd, errno, strerror(errno));
+
+1.2 read函数
+//头文件
+#include <unistd.h>
+//函数原型 从打开的文件描述符fd中读取count大小的内容，返回读取的字节数，把内容存放在buf中，如果返回0,代表读到文件结尾，如果返回-1 最好设置errno变量
+ssize_t read(int fd, void *buf, size_t count);
+
+1.3 write函数
+//头文件
+#include <unistd.h>
+//函数原型  从打开的文件描述符fd文件中写入count大小的内容
+ssize_t write(int fd, const void *buf, size_t count);
+
+1.4 close函数
+//头文件
+#include <unistd.h>
+//函数原型  关闭文件句柄
+int close(int fd);
+
+1.5 lseek函数
+#include <sys/types.h>
+#include <unistd.h>
+fd：需要操作的文件描述符
+offset:偏移的大小
+whence：位置的位置
+SEEK_SET:自定义设置的偏移量
+SEEK_CUR：光标设置到当前位置    
+SEEK_END：光标设置到文件结束位置   
+off_t lseek(int fd, off_t offset, int whence);
+//计算文件大小demo
+int fd = -1;
+int lenth = 0;
+fd = open("path", O_RDONLY);
+if(fd == -1)
+{
+	printf("open fail\n",strerror(errno));
+	return -1;
+}
+lenth = lseek(fd, 0, SEEK_END);
+printf("lenth:%d", lenth);
+
+1.6 fcntl函数
+#include <unistd.h>
+#include <fcntl.h>
+//对文件描述符进行操作
+fd：
+cmd:F_GETFD	获取fd信息  arg：void  return: fd的参数
+	F_SETFD 设置fd参数	arg：int
+int fcntl(int fd, int cmd, ... /* arg */ );
+
+1.7 stat函数
+//获取文件信息
+int stat(const char *pathname, struct stat *statbuf);
+int fstat(int fd, struct stat *statbuf);
+           struct stat {
+               dev_t     st_dev;     /* ID of device containing file */
+               ino_t     st_ino;     /* inode number */
+               mode_t    st_mode;    /* protection */
+               nlink_t   st_nlink;   /* number of hard links */
+               uid_t     st_uid;     /* user ID of owner */
+               gid_t     st_gid;     /* group ID of owner */
+               dev_t     st_rdev;    /* device ID (if special file) */
+               off_t     st_size;    /* total size, in bytes */
+               blksize_t st_blksize; /* blocksize for file system I/O */
+               blkcnt_t  st_blocks;  /* number of 512B blocks allocated */
+               time_t    st_atime;   /* time of last access */
+               time_t    st_mtime;   /* time of last modification */
+               time_t    st_ctime;   /* time of last status change */
+           };
+
+
+
+2.标准IO
+对文件IO进行了封装 有缓冲
+// 成功返回FILE类型指针，否则返回NULL
+FILE *fopen(const char *pathname, const char *mode);
+FILE *fdopen(int fd, const char *mode);
+FILE *freopen(const char *pathname, const char *mode, FILE *stream);
+// 成功返回0，否则返回EOF(-1)
+int fclose(FILE *stream);
+
+// 成功返回下一个读取的字符；失败或者读到文件尾，返回EOF
+int getc(FILE *fp);
+int fgetc(FILE *fp);
+int getchar(void);
+
+// 成功返回写入的字符；失败返回EOF
+int putc(int c, FILE *fp);
+int fputc(int c, FILE *fp);
+int putchar(int c);
+
+
+int fseek(FILE *stream, long offset, int whence);
+
+// 不是EOF返回0，否则返回非0
+int feof(FILE *stream);
+// 不是error返回0，否则返回非0
+int ferror(FILE *stream);
+
+// 成功返回s，错误或者读到EOF返回NULL
+char *fgets(char *s, int size, FILE *stream);
+// 成功返回非0，否则返回EOF
+int fputs(const char *s, FILE *stream);
+// 直接输出到stdout
+int puts(const char *s);
+
+size_t fread(void *ptr, size_t size, size_t nmemb, FILE *stream);
+size_t fwrite(const void *ptr, size_t size, size_t nmemb, FILE *stream);
+
+
+
+long ftell(FILE *stream);
+void rewind(FILE *stream);
+
+3.格式化IO
+int scanf(const char *restrict format, ...);
+int fscanf(FILE *restrict fp, const char *restrict format, ...);
+int sscanf(const char *restrict buf, const char *restrict fromat, ...);
+printf 
+int fprintf(FILE *restrict fp, const char *restrict format, ...);
+int sprintf(char *restrict buf, const *restrict format, ...);
+int snprintf(char *str, size_t size, const char *format, ...);
+
+
+4.C++ IO
+iostream fstream sstream
+
+
+
+

@@ -1,0 +1,6 @@
+
+There are ens33 and ens34
+But no ip addr
+Solution:
+	sudo dhclient ens33
+	sudo ifconfig ens33

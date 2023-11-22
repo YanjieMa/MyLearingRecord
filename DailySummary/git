@@ -1,0 +1,16 @@
+
+1.install
+	git config --global user.name "username"
+	git config --global user.email "email@example.com"
+2.init
+	git init
+3.git add *
+  git status
+  git commit -m "first commit"  
+  git log
+  git diff
+
+4.push
+	git branch -M main
+	git remote add origin https://github.com/username/reponsitoryname.git
+	git push -u origin main

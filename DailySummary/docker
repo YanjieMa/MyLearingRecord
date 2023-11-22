@@ -1,0 +1,53 @@
+1.docker install
+	sudo apt-get install docker.io docker
+2.get ubuntu image
+	sudo docker pull ubuntu
+3.chmod
+	sudo groupadd docker
+	sudo gpasswd -a ${USER} docke
+	sudo chmod a+rw /var/run/docker.sock
+	sudo systemctl restart docker 
+
+docker
+4.run image as docker
+	docker run -it /bin/bash
+5.exit docker
+	exit
+6.consult all docker
+	docker ps -a
+7.consult running docker
+	docker ps
+8.run stoped docker
+	docker start <id>(9e3dc)
+9.stop a running docker 
+	docker stop <id>(9e3dc)
+10.run iamge as docker with -d
+	docker run -itd --name myUbuntu ubuntu /bin/bash
+11.enter docker
+	docker exec -it <id>(9e3dc) /bin/bash
+12.export docker
+	docker export <id>(9e3dc) > myUbuntu.tar
+13.import docker
+	cat myUbuntu.tar | docker import - test/ubuntu_v1
+14.remove docker 
+	docker rm -f <id>(9e3dc) 
+
+image
+1.image list
+	docker images
+2.get image
+	docker pull ubuntu
+3.delete image
+	docker rmi ubuntu
+4.search image
+	docker serach <image name>
+
+
+repository
+1.login
+	docker login
+2.push
+	docker export <id> > myubuntu.tar
+	cat myubuntu.tar | docker import - myubuntu:v1
+	docker tag myubuntu:v1 <account>/myubuntu:v1
+	docker push <account>/myubuntu:v1	
